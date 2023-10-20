@@ -1,35 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { LocomotiveScrollProvider } from "react-locomotive-scroll";
+import Header from "./components/Header/Header";
+import GlobalStyles from "./styles/GlobalStyles";
+import { useRef } from "react";
+import Home from "./pages/Home";
+import 'locomotive-scroll/dist/locomotive-scroll.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const containerRef = useRef(null);
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <GlobalStyles />
+      <Header />
+        
+        <LocomotiveScrollProvider
+          options={{
+            smooth: true,
+            // ... all available Locomotive Scroll instance options
+          }}
+          watch={
+            [
+              //..all the dependencies you want to watch to update the scroll.
+              //  Basicaly, you would want to watch page/location changes
+              //  For exemple, on Next.js you would want to watch properties like `router.asPath` (you may want to add more criterias if the instance should be update on locations with query parameters)
+            ]
+          }
+          containerRef={containerRef}
+        >
+          <main data-scroll-container ref={containerRef}>
+          <Home />
+          </main>
+        </LocomotiveScrollProvider>
+      
     </>
-  )
+  );
 }
 
-export default App
+export default App;
