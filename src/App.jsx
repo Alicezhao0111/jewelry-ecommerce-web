@@ -4,13 +4,20 @@ import GlobalStyles from "./styles/GlobalStyles";
 import { useRef } from "react";
 import Home from "./pages/Home";
 import 'locomotive-scroll/dist/locomotive-scroll.css'
+import { ThemeProvider } from "styled-components";
+import { theme } from "./styles/Themes";
+import Logo from "./components/Logo";
+import Navbar from "./components/Navbar";
 
 function App() {
   const containerRef = useRef(null);
   return (
     <>
       <GlobalStyles />
-      <Header />
+      
+      <ThemeProvider theme={theme}>
+      <Logo />
+      <Navbar />
         
         <LocomotiveScrollProvider
           options={{
@@ -30,6 +37,7 @@ function App() {
           <Home />
           </main>
         </LocomotiveScrollProvider>
+        </ThemeProvider>
       
     </>
   );

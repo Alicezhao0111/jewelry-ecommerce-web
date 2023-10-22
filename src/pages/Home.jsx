@@ -1,14 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
+import Landing from '../components/Landing'
+
 
 const Section = styled.section`
   position: relative;
-  height: 200vh;
+  min-height: 200vh;
 `
 function Home() {
   return (
     <Section>
-      home
+      <Landing />
     </Section>
   )
 }
