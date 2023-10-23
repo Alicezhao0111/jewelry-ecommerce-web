@@ -1,24 +1,71 @@
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
-import Header from "./components/Header/Header";
-import GlobalStyles from "./styles/GlobalStyles";
+import "locomotive-scroll/dist/locomotive-scroll.css";
+import Header from "./components/navbar/Navbar";
 import { useRef } from "react";
-import Home from "./pages/Home";
-import 'locomotive-scroll/dist/locomotive-scroll.css'
-import { ThemeProvider } from "styled-components";
-import { theme } from "./styles/Themes";
-import Logo from "./components/Logo";
-import Navbar from "./components/Navbar";
+import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import Home from "./pages/home/Home";
+import About from "./pages/about/About";
+import Blog from "./pages/blog/Blog";
+import Faq from "./pages/faq/Faq";
+import Contact from "./pages/contact/Contact";
+import Shop from "./pages/shop/Shop";
+import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/footer/Footer";
+
+const Layout =()=>{
+  return (
+    <div className="app">
+      <Navbar />
+      <Outlet />
+      <Footer />
+
+    </div>
+  )
+
+}
+const router = createBrowserRouter([
+  {
+    path:"/",
+    element: <Layout />,
+    children:[
+      {
+        path:"/",
+        element: <Home />
+      },
+      {
+        path:"/shop",
+        element: <Shop />
+      },
+      {
+        path:"/about",
+        element: <About />
+      },
+      {
+        path:"/blog",
+        element: <Blog />
+      },
+      {
+        path:"/faq",
+        element: <Faq />
+      },
+      {
+        path:"/contact",
+        element: <Contact />
+      }
+      
+    ]
+
+  },
+ 
+
+])
 
 function App() {
+
   const containerRef = useRef(null);
   return (
     <>
-      <GlobalStyles />
-      
-      <ThemeProvider theme={theme}>
-      <Logo />
-      <Navbar />
-        
+
         <LocomotiveScrollProvider
           options={{
             smooth: true,
@@ -34,11 +81,9 @@ function App() {
           containerRef={containerRef}
         >
           <main data-scroll-container ref={containerRef}>
-          <Home />
+<RouterProvider router={router} />
           </main>
         </LocomotiveScrollProvider>
-        </ThemeProvider>
-      
     </>
   );
 }

@@ -1,0 +1,22 @@
+.navbar{
+    height: 96px;
+    
+    .wrapper{
+        height: 55px;
+        padding-top: 2.56rem;
+        display: flex;
+        justify-content: space-between;
+
+        .left{
+            display: flex;
+
+            .menu{
+                display: flex;
+            }
+        }
+
+        .right{
+            display: flex;
+        }
+    }
+}
