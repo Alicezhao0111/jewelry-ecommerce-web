@@ -2,7 +2,7 @@ import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import Header from "./components/navbar/Navbar";
 import { useRef } from "react";
-import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import { HashRouter, Outlet, Route, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Blog from "./pages/blog/Blog";
@@ -12,53 +12,23 @@ import Shop from "./pages/shop/Shop";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 
-const Layout =()=>{
+const Layout = () => {
   return (
     <div className="app">
       <Navbar />
-      <Outlet />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/faq" element={<Faq />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
       <Footer />
-
     </div>
-  )
+  );
+};
 
-}
-const router = createBrowserRouter([
-  {
-    path:"/",
-    element: <Layout />,
-    children:[
-      {
-        path:"/",
-        element: <Home />
-      },
-      {
-        path:"/shop",
-        element: <Shop />
-      },
-      {
-        path:"/about",
-        element: <About />
-      },
-      {
-        path:"/blog",
-        element: <Blog />
-      },
-      {
-        path:"/faq",
-        element: <Faq />
-      },
-      {
-        path:"/contact",
-        element: <Contact />
-      }
-      
-    ]
-
-  },
- 
-
-])
 
 function App() {
 
@@ -81,7 +51,9 @@ function App() {
           containerRef={containerRef}
         >
           <main data-scroll-container ref={containerRef}>
-<RouterProvider router={router} />
+          <HashRouter>
+            <Layout />
+          </HashRouter>
           </main>
         </LocomotiveScrollProvider>
     </>
