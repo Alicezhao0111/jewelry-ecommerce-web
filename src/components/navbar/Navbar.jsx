@@ -13,27 +13,29 @@ const Navbar = () => {
     <div className="navbar">
       <div className="wrapper">
         <div className="left">
+            <div className="logo">
           <Link to="/">Boho Daze</Link>
+          </div>
           <div className="menu">
-          <div className="item">
-            <Link to="/">HOME</Link>
+            <div className="item">
+              <Link to="/">HOME</Link>
+            </div>
+            <div className="item">
+              <Link to="/">SHOP</Link>
+            </div>
+            <div className="item">
+              <Link to="/">ABOUT</Link>
+            </div>
+            <div className="item">
+              <Link to="/">BLOG</Link>
+            </div>
+            <div className="item">
+              <Link to="/">FAQ</Link>
+            </div>
+            <div className="item">
+              <Link to="/">CONTACT</Link>
+            </div>
           </div>
-          <div className="item">
-            <Link to="/">SHOP</Link>
-          </div>
-          <div className="item">
-            <Link to="/">ABOUT</Link>
-          </div>
-          <div className="item">
-            <Link to="/">BLOG</Link>
-          </div>
-          <div className="item">
-            <Link to="/">FAQ</Link>
-          </div>
-          <div className="item">
-            <Link to="/">CONTACT</Link>
-          </div>
-        </div>
         </div>
 
         <div className="right">

@@ -11,6 +11,7 @@ import Contact from "./pages/contact/Contact";
 import Shop from "./pages/shop/Shop";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
+import "./reset.scss"
 
 const Layout = () => {
   return (
