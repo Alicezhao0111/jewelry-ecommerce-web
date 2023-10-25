@@ -1,0 +1,106 @@
+.footer {
+    height: 310px;
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding-top: 38px;
+    padding-left: 12%;
+    padding-right: 5%;
+    
+    background-color: #CAB4A3;
+    color: #ffffff;
+
+    display: flex;
+
+
+    h3 {
+        font-family: Belleza;
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.05625rem;
+        white-space: nowrap;
+
+        margin-bottom: 34px;
+    }
+
+    .left {
+        display: flex;
+        gap: 40px;
+        flex: 1;
+
+        .item{
+            display: flex;
+            flex-direction: column;
+            
+
+            .shop{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 20px;
+            }
+
+            .email{
+                display: flex;
+                flex-direction: column;
+                
+
+                h3{
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+
+
+        span {
+            font-family: Belleza;
+            font-family: Belleza;
+            font-size: 0.9375rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height:normal;
+            letter-spacing: 0.04219rem;
+            white-space: nowrap;
+            margin-bottom: 5px;
+        }
+
+    }
+
+    .right {
+        
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+
+        .icon{
+            display: flex;
+            gap:11px;
+            margin-bottom: 17px;
+            
+
+        }
+
+        
+
+        span {
+            font-family: Belleza;
+            font-size: 0.9375rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            white-space: nowrap;
+        }
+        .signature{
+            width: 70%;
+            margin-bottom: 33.7px;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+}
