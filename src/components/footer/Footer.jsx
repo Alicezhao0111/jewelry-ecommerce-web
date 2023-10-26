@@ -36,7 +36,7 @@ function Footer() {
 
       <div className="right">
       <div className="signature">
-            <img src="./public/sign.png" alt="" />
+            <img src="src/assets/sign.png" alt="" />
           </div>
         <div className="icon">
 
