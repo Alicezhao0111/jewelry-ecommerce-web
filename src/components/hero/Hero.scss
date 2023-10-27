@@ -24,6 +24,7 @@
         margin-top: 20px;
 
         .text {
+
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
@@ -92,6 +93,7 @@
 
         .pic {
             flex-basis: 34%;
+            
             img {
                 height: 100%;
             }
