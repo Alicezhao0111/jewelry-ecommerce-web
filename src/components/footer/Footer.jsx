@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.scss";
+import sign from "../../assets/sign.png"
 
 function Footer() {
   return (
@@ -36,7 +37,7 @@ function Footer() {
 
       <div className="right">
       <div className="signature">
-            <img src="src/assets/sign.png" alt="" />
+            <img src={sign} alt="" />
           </div>
         <div className="icon">
 
