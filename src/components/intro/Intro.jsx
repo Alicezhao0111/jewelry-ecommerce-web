@@ -31,7 +31,8 @@ const Intro = () => {
                 has always been a passion of mine. From each journey, I draw
                 inspiration from every little moment and transform them into
                 bohemian accessories through the ancient art of macramé
-                knotting. Each piece of Boho Daze jewelry carries a meaningful
+                knotting. <br/>
+                Each piece of Boho Daze jewelry carries a meaningful
                 purpose. In a society where the mainstream emphasis is on
                 pursuing stable jobs and lives, we understand that many free
                 spirits, like myself, often find themselves questioning their
