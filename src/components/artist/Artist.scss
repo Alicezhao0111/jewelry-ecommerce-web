@@ -1,0 +1,116 @@
+.artist {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .container {
+        width: 65.6%;
+        display: flex;
+        flex-direction: column;
+
+        margin:8% 0 8% 5%;
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            flex-basis: 63.9%;
+
+            .left {
+                width: 24.5%;
+
+                img {
+                    width: 100%;
+
+                }
+            }
+
+            .right {
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+
+                width: 70%;
+                padding-top: 3%;
+
+                .content {
+
+                    align-self: start;
+                    width: 91%;
+
+                    h2 {
+                        color: var(--brown, #BDA18C);
+                        font-family: Gilda Display;
+                        font-size: 1.75rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+
+                        margin-bottom: 2%;
+                    }
+
+                    p {
+                        color: var(--Dark-grey, #6F6152);
+                        font-family: Belleza;
+                        font-size: 1.2vw;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 146%;
+                        /* 1.825rem */
+
+                        margin-bottom: 6%;
+                    }
+
+                    .button {
+                        span {
+                            color: #B14E31;
+                            font-family: Gilda Display;
+                            font-size: 1.25rem;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                        }
+                    }
+                }
+
+                .pic {
+                    width: 22%;
+
+                    img {
+                        width: 100%;
+                    }
+
+                }
+            }
+        }
+
+        .bottom {
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 70.7%;
+            height: 42.7%;
+            margin-top: -5%;
+            
+
+            h3 {
+                color: var(--Dark-grey, #6F6152);
+                font-family: Gilda Display;
+                font-size: 1.3vw;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+
+                margin-left: 6%;
+
+                
+            }
+
+            img{
+                height: 100%;
+
+            }
+        }
+    }
+}
