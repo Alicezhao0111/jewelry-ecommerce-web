@@ -25,7 +25,8 @@
     "react-locomotive-scroll": "^0.2.2",
     "react-router-dom": "^6.17.0",
     "sass": "^1.69.4",
-    "styled-components": "^6.1.0"
+    "styled-components": "^6.1.0",
+    "swiper": "^11.0.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
