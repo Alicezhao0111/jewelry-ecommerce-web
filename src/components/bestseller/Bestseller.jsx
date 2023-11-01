@@ -75,9 +75,7 @@ const Bestseller = () => {
         </div>
         <div className="right">
             
-          <Swiper
-            spaceBetween={35}
-            slidesPerView={3.3}>
+          <Swiper spaceBetween={35} slidesPerView={3.3}>
             
                 {data.map((data)=>{
                     return (

@@ -1,0 +1,25 @@
+.subscribe{
+    width: 100%;
+    height: 80vh;
+
+
+    .fixed_wrapper{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .fixed_target{
+            height: 30%;
+            background-color: aqua;
+        
+        
+
+        img{
+            
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    }
+}

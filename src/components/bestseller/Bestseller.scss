@@ -22,7 +22,7 @@
             width: 30%;
             margin-right: 3%;
 
-            
+
             h2 {
                 color: #FFF;
                 text-align: start;
@@ -67,44 +67,44 @@
                 }
             }
         }
-        .right{
+
+        .right {
             position: relative;
             height: 350px;
             width: 880px; //之後要設定media
             // background-color: #B14E31;
-            
-            .swiper{
+
+            .swiper {
                 height: 350px;
-                
-                
-                
+                padding-bottom: 30px;
+
             }
 
-            .swiper-slide{
-                
+            .swiper-slide {
+
                 display: flex;
-                
+
                 overflow: hidden;
                 border-radius: 300px 300px 0 0;
 
+                padding-bottom: 30px;
             }
 
 
-              img{
-                object-fit:cover;
+            img {
+                object-fit: cover;
                 height: 100%;
-              }
-              span{
-                color: #FFF;
-font-family: Belleza;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-              }
-        }
+            }
 
+            span {
+                color: #FFF;
+                font-family: Belleza;
+                font-size: 1.1rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+
+            }
+        }
     }
 }
-
-//要在設定span看要不要移開<a>
