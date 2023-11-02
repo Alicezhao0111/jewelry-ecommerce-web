@@ -6,6 +6,7 @@ import "./home.scss"
 import Artist from '../../components/artist/Artist'
 import Bestseller from '../../components/bestseller/Bestseller'
 import Subscribe from '../../components/subscribe/Subscribe'
+import Category from '../../components/category/Category'
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
     <Artist />
     <Bestseller />
     <Subscribe />
+    <Category />
     
     
     </div>
