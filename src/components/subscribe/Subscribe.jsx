@@ -1,19 +1,22 @@
 import React from "react";
 import "./Subscribe.scss";
+import userIcon from "../../assets/userIcon.svg"
+import starIcon from "../../assets/starIcon.svg"
+import globalIcon from "../../assets/globalIcon.svg"
 import subBg from "../../assets/subBg.jpg"
 
 const Subscribe = () => {
   return (
     <div className="subscribe">
-      <div data-scroll-container id="scroll-container">
-      <div class="fixed" data-scroll data-scroll-sticky data-scroll-target="#scroll-container">
-          <img src={subBg} alt="background" />
+      <div className="container">
+
           <div className="content">
+            
             <h2>Free the spirit</h2>
             <h3>Sign up to receive free delivery for your first order</h3>
             <p>加入會員即贈免運卷 </p>
             <div className="btn">
-              <span>SHOP NOW</span>
+              <span>JOIN NOW</span>
               <svg
                 width="38"
                 height="6"
@@ -27,23 +30,27 @@ const Subscribe = () => {
                 />
               </svg>
             </div>
-          </div>
-
         </div>
       </div>
       <div className="bottom">
-        <div className="container">
+        <div className="items">
             <div className="item">
-                <img src="" alt="" />
-                <p></p>
+                <div className="box">
+                <img src={userIcon} alt="" />
+                </div>
+                <p>Customized service available</p>
             </div>
             <div className="item">
-                <img src="" alt="" />
-                <p></p>
+                <div className="box">
+                    <img src={starIcon} alt="" />
+                </div>
+                <p>5 stars rating on Pinkoi and Shopee</p>
             </div>
             <div className="item">
-                <img src="" alt="" />
-                <p></p>
+            <div className="box">
+                <img src={globalIcon} alt="" />
+                </div>
+                <p>Worldwide shipping available</p>
             </div>
         </div>
       </div>
@@ -52,3 +59,5 @@ const Subscribe = () => {
 };
 
 export default Subscribe;
+
+

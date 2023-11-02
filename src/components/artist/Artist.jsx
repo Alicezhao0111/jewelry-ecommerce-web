@@ -7,10 +7,10 @@ import artist3 from "../../assets/artist3.png";
 const Artist = () => {
   return (
     <div className="artist">
-      <div className="container">
+      <div className="container" >
         <div className="top">
           <div className="left">
-            <img src={artist} alt="" />
+            <img data-scroll data-scroll-speed="2.2" src={artist} alt="" />
           </div>
           <div className="right">
             <div className="content">
@@ -40,13 +40,13 @@ const Artist = () => {
               </div>
             </div>
             <div className="pic">
-                <img src={artist2}alt="" />
+                <img data-scroll data-scroll-speed="2.8" src={artist2}alt="" />
             </div>
           </div>
         </div>
         <div className="bottom">
           <h3>Handmade with love and good vibes</h3>
-          <img src={artist3} alt="" />
+          <img data-scroll data-scroll-speed="2.6" src={artist3} alt="" />
         </div>
       </div>
     </div>
