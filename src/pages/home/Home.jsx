@@ -7,6 +7,7 @@ import Artist from '../../components/artist/Artist'
 import Bestseller from '../../components/bestseller/Bestseller'
 import Subscribe from '../../components/subscribe/Subscribe'
 import Category from '../../components/category/Category'
+import Gift from '../../components/gift/Gift'
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
     <Bestseller />
     <Subscribe />
     <Category />
+    <Gift />
     
     
     </div>
