@@ -8,6 +8,7 @@ import Bestseller from '../../components/bestseller/Bestseller'
 import Subscribe from '../../components/subscribe/Subscribe'
 import Category from '../../components/category/Category'
 import Gift from '../../components/gift/Gift'
+import Instagram from '../../components/instagram/Instagram'
 
 function Home() {
   return (
@@ -18,6 +19,7 @@ function Home() {
     <Subscribe />
     <Category />
     <Gift />
+    <Instagram />
     
     
     </div>

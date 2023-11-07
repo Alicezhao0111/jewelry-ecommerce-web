@@ -60,10 +60,7 @@ const Category = () => {
             })}
           </Swiper>
         </div>
-        <div className="slogan">
-          <span>Whatever makes your soul happy</span>
-          <span>Do that</span>
-        </div>
+
       </div>
     </div>
   );
