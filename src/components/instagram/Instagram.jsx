@@ -46,7 +46,9 @@ const Instagram = () => {
             );
           })}
         </div>
-        <div className="account">
+        
+        <a href="https://www.instagram.com/boho.daze/" target="_blank" className="account">
+            <div className="icon">
           <svg
             width="40"
             height="41"
@@ -74,8 +76,11 @@ const Instagram = () => {
               stroke-linejoin="round"
             />
           </svg>
+          </div>
+          
           <h3>boho.daze</h3>
-        </div>
+          </a>
+        
       </div>
     </div>
   );
