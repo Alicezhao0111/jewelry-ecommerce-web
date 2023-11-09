@@ -52,7 +52,7 @@ const Hero = () => {
               x2="14.0607"
               y2="309.939"
               stroke="white"
-              stroke-width="3"
+              strokeWidth="3"
             />
             <line
               y1="-1.5"
@@ -60,7 +60,7 @@ const Hero = () => {
               y2="-1.5"
               transform="matrix(-0.707107 0.707107 0.707107 0.707107 26 298)"
               stroke="white"
-              stroke-width="3"
+              strokeWidth="3"
             />
             <line
               x1="1.06066"
@@ -68,7 +68,7 @@ const Hero = () => {
               x2="14.0607"
               y2="322.939"
               stroke="white"
-              stroke-width="3"
+              strokeWidth="3"
             />
             <line
               y1="-1.5"
@@ -76,7 +76,7 @@ const Hero = () => {
               y2="-1.5"
               transform="matrix(-0.707107 0.707107 0.707107 0.707107 26 311)"
               stroke="white"
-              stroke-width="3"
+              strokeWidth="3"
             />
             <line
               x1="1.06066"
@@ -84,7 +84,7 @@ const Hero = () => {
               x2="14.0607"
               y2="335.939"
               stroke="white"
-              stroke-width="3"
+              strokeWidth="3"
             />
             <line
               y1="-1.5"
@@ -92,7 +92,7 @@ const Hero = () => {
               y2="-1.5"
               transform="matrix(-0.707107 0.707107 0.707107 0.707107 26 324)"
               stroke="white"
-              stroke-width="3"
+              strokeWidth="3"
             />
           </svg>
         </div>

@@ -79,8 +79,8 @@ const Bestseller = () => {
             
                 {data.map((data)=>{
                     return (
-                        <SwiperSlide>
-                            <a key={data.id} href="#" className="list-group-item">
+                        <SwiperSlide key={data.id} >
+                            <a href="#" className="list-group-item">
                                 <img src={data.img} alt="bestseller" className="img-item"/>
                                 <span>{data.name}</span>
                             </a>

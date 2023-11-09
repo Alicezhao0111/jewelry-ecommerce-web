@@ -59,21 +59,21 @@ const Instagram = () => {
             <path
               d="M20 28.7223C24.4182 28.7223 28 25.041 28 20.5001C28 15.959 24.4182 12.2778 20 12.2778C15.5817 12.2778 12 15.959 12 20.5001C12 25.041 15.5817 28.7223 20 28.7223Z"
               stroke="#BDA18C"
-              stroke-width="3.99"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3.99"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <path
               d="M2 28.7222V12.2778C2 6.60153 6.47716 2 12 2H28C33.5228 2 38 6.60153 38 12.2778V28.7222C38 34.3984 33.5228 39 28 39H12C6.47716 39 2 34.3984 2 28.7222Z"
               stroke="#BDA18C"
-              stroke-width="3.99"
+              strokeWidth="3.99"
             />
             <path
               d="M31 9.21586L31.0211 9.19238"
               stroke="#BDA18C"
-              stroke-width="3.99"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="3.99"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
           </div>
