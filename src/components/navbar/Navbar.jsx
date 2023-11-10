@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 import "./Navbar.scss"
 
 const Navbar = () => {
+  const [activeItem, setActiveItem] = useState("");
+
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -16,26 +18,26 @@ const Navbar = () => {
             <div className="logo">
           <Link to="/">Boho Daze</Link>
           </div>
-          <div className="menu">
-            <div className="item">
+          <ul className="menu">
+            <li className={activeItem ==="home" ? "item active":"item"} onClick={()=>{setActiveItem("home")}}>
               <Link to="/">HOME</Link>
-            </div>
-            <div className="item">
+            </li>
+            <li className={activeItem ==="shop" ? "item active":"item"} onClick={()=>{setActiveItem("shop")}}>
               <Link to="/">SHOP</Link>
-            </div>
-            <div className="item">
+            </li>
+            <li className={activeItem ==="about" ? "item active":"item"} onClick={()=>{setActiveItem("about")}}>
               <Link to="/">ABOUT</Link>
-            </div>
-            <div className="item">
+            </li>
+            <li className={activeItem ==="blog" ? "item active":"item"} onClick={()=>{setActiveItem("blog")}}>
               <Link to="/">BLOG</Link>
-            </div>
-            <div className="item">
+            </li>
+            <li className={activeItem ==="faq" ? "item active":"item"} onClick={()=>{setActiveItem("faq")}}>
               <Link to="/">FAQ</Link>
-            </div>
-            <div className="item">
+            </li>
+            <li className={activeItem ==="contact" ? "item active":"item"} onClick={()=>{setActiveItem("contact")}}>
               <Link to="/">CONTACT</Link>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
 
         <div className="right">
