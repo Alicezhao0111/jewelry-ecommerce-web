@@ -1,0 +1,52 @@
+.products {
+    padding-top: 96px;
+
+    .container {
+        display: flex;
+        padding-top: 50px;
+        padding-left: 100px;
+
+
+
+        .category {
+
+            width: 28.5%;
+
+            .group {
+                display: inline-flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+
+                margin-top: 15px;
+                margin-bottom: 30px;
+
+                a {
+                    color: var(--Dark-grey, #6F6152);
+                    font-family: Belleza;
+                    font-size: 1.2rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+
+            }
+
+
+
+            h2 {
+                color: var(--brown, #BDA18C);
+                font-family: Gilda Display;
+                font-size: 1.3rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+
+
+
+
+        }
+
+    }
+}
