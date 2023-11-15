@@ -11,6 +11,7 @@ import "./Navbar.scss"
 const Navbar = () => {
   const [activeNav, setActiveNav] = useState(false);
   const [activeItem, setActiveItem] = useState("");
+  const [darkBg, setDarkBg] = useState (false);
   const location = useLocation();
 
   //item動畫底線&特殊情況nav樣式設定
@@ -22,28 +23,32 @@ const Navbar = () => {
     function changeBg(){ //nav樣式設定
       const path = location.pathname;
       
-      if (window.scrollY>0 || path==="/shop"){
-        setActiveNav(true);
+      if (path==="/shop"){
+        setDarkBg(true);
       }else{
-        setActiveNav(false);
+        setDarkBg(false);
       }
   
     };
 
     changeBg();
-
-    window.addEventListener('scroll',changeBg);
-
-    return()=>{
-      window.removeEventListener('scroll',changeBg);
-    } //移除監聽器
+     console.log(darkBg);
 
   }, [location]); //當 location 變化時重新運行
 
+  const scrollStyle=()=>{
+    if (window.scrollY>10){
+      setActiveNav(true);
+    }else{
+      setActiveNav(false);
+    }
+  }
+  window.addEventListener('scroll',scrollStyle);
+  
 
   return (
     <div className="navbar">
-      <div className={activeNav===true?"wrapper active":"wrapper"}>
+      <div className={activeNav || darkBg ===true?"wrapper active":"wrapper"}>
         <div className="left">
             <div className="logo">
           <Link to="/">Boho Daze</Link>
