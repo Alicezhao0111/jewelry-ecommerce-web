@@ -16,7 +16,7 @@ function Footer() {
           <span>Mama's bag</span>
         </div>
         <div className="item">
-          <div className="shop">
+          <div className="otherShop">
             <h3>YOU CAN ALSO SHOP ON...</h3>
             <span>Shopee (Taiwan only)</span>
             <span>Pinkoi (Worldwide shipping)</span>

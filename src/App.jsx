@@ -1,19 +1,23 @@
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import Header from "./components/navbar/Navbar";
-import { useRef } from "react";
-import { HashRouter, Outlet, Route, Routes } from "react-router-dom";
+import { useEffect, useRef } from "react";
+import { HashRouter, Outlet, Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Blog from "./pages/blog/Blog";
 import Faq from "./pages/faq/Faq";
 import Contact from "./pages/contact/Contact";
-import Shop from "./pages/shop/Shop";
+import Shop from "./pages/Shop/Shop";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import "./reset.scss"
 
 const Layout = () => {
+  const location = useLocation();
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  },[location])
   return (
     <div className="app">
       <Navbar />

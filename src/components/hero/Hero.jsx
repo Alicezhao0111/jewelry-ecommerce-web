@@ -1,13 +1,14 @@
 import React from "react";
 import "./Hero.scss";
 import landingpic from "../../assets/landingpic.png";
+import landingpic1 from "../../assets/landingpic1.png";
 
 const Hero = () => {
   return (
     <div className="hero">
       <div className="top">
         <div className="pic">
-          <img src={landingpic} alt="" />
+          <img src={landingpic1} alt="" />
         </div>
         <div className="text">
           <h2>Handmade</h2>

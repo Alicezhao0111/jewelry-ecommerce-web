@@ -32,7 +32,7 @@ const Navbar = () => {
     };
 
     changeBg();
-     console.log(darkBg);
+    console.log(darkBg);
 
   }, [location]); //當 location 變化時重新運行
 
@@ -42,6 +42,7 @@ const Navbar = () => {
     }else{
       setActiveNav(false);
     }
+    console.log(activeNav);
   }
   window.addEventListener('scroll',scrollStyle);
   
