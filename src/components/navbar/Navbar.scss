@@ -3,7 +3,7 @@
     width: 100%;
     color: white;
 
-    position: fixed;
+    position: fixed !important;
     top: 0;
     left: 0;
     right: 0;
@@ -102,6 +102,7 @@
         }
     }
     .wrapper.active{
+
         background: #F3F0ED;
         color:#BDA18C;
         a{

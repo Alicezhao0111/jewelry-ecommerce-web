@@ -36,16 +36,24 @@ const Navbar = () => {
 
   }, [location]); //當 location 變化時重新運行
 
-  const scrollStyle=()=>{
-    if (window.scrollY>0){
-      setActiveNav(true);
-    }else{
-      setActiveNav(false);
+  useEffect(()=>{
+    const scrollStyle=()=>{
+      if (window.scrollY>0){
+        setActiveNav(true);
+      }else{
+        setActiveNav(false);
+      }
+      console.log(activeNav);
+      console.log(window.scrollY);
     }
-    console.log(activeNav);
-    console.log(window.scrollY);
-  }
-  window.addEventListener('scroll',scrollStyle);
+    window.addEventListener('scroll',scrollStyle);
+
+    return () => {
+      window.removeEventListener('scroll', scrollStyle);
+    };
+
+  },[])
+  
   
   
 
