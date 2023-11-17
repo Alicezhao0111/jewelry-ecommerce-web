@@ -1,0 +1,60 @@
+[
+    {
+        "id": "1",
+        "category": "earrings",
+        "name": "nebula earrings",
+        "price": {
+            "USD":19,
+            "NTD":580
+        },
+        "color":["Starry night","Desert sunset"],
+        "option":["earring hooks", "ear clip"],
+        "stock": 20,
+        "img": ["/src/assets/products/nebula1.jpg","/src/assets/products/nebula2.jpg","/src/assets/products/nebula3.jpg","/src/assets/products/nebula4.jpg","/src/assets/products/nebula5.jpg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "2",
+        "category": "earrings",
+        "name": "mars earrings",
+        "price": {
+            "USD":19,
+            "NTD":580
+        },
+        "color":["Starry night","Desert sunset"],
+        "option":["earring hooks", "ear clip"],
+        "stock": 20,
+        "img": ["/src/assets/products/mars1.jpg","/src/assets/products/mars2.jpg","/src/assets/products/mars3.jpg","/src/assets/products/mars4.jpg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "3",
+        "category": "earrings",
+        "name": "flower earrings",
+        "price": {
+            "USD":24,
+            "NTD":660
+        },
+        "option":["earring hooks", "ear clip"],
+        "stock": 20,
+        "img": ["/src/assets/products/flowerE1.jpg","/src/assets/products/flowerE2.jpg","/src/assets/products/flowerE3.jpg","/src/assets/products/flowerE4.jpg","/src/assets/products/flowerE5.jpg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "4",
+        "category": "earrings",
+        "name": "shell earrings",
+        "price": {
+            "USD":19,
+            "NTD":580
+        },
+        "option":["earring hooks", "ear clip"],
+        "stock": 20,
+        "img": ["/src/assets/products/shellE1.jpg","/src/assets/products/shellE2.jpg","/src/assets/products/shellE3.jpg"],
+        "shipping": 1,
+        "quantity": 0
+    }
+]

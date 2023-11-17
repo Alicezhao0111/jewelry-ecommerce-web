@@ -1,4 +1,5 @@
 import React from "react";
+import productData from "../../products.json";
 import "./Products.scss";
 
 const Products = () => {
@@ -67,9 +68,21 @@ const Products = () => {
                 <option value="price">Price, low to high</option>
               </select>
             </div>
-            <div className="products"></div>
           </div>
-          <div className="products"></div>
+          <div className="productList">
+            {productData.map(product=>(
+              <div key={product.id}>
+                <div className="box">
+                <img src={product.img[0]} alt="" />
+                </div>
+                <div className="text">
+                <h3>{product.name}</h3>
+                <span>NT {product.price.NTD}</span>
+                </div>
+              </div>
+            ))}
+
+          </div>
         </div>
       </div>
     </div>
