@@ -32,6 +32,7 @@
     {
         "id": "3",
         "category": "earrings",
+        "series":"flower collection",
         "name": "flower earrings",
         "price": {
             "USD":24,
@@ -74,6 +75,7 @@
     {
         "id": "6",
         "category": "earrings",
+        "series":"sun collection",
         "name": "sun earrings",
         "price": {
             "USD":24,
@@ -88,6 +90,7 @@
     {
         "id": "7",
         "category": "bracelet",
+        "series":"sun collection",
         "name": "sun bracelet",
         "price": {
             "USD":22,
@@ -102,6 +105,7 @@
     {
         "id": "8",
         "category": "bracelet",
+        "series":"flower collection",
         "name": "bali flower bracelet",
         "price": {
             "USD":30,
@@ -116,6 +120,7 @@
     {
         "id": "9",
         "category": "bracelet",
+        "series":"flower collection",
         "name": "brass flower bracelet",
         "price": {
             "USD":23,
@@ -130,6 +135,7 @@
     {
         "id": "10",
         "category": "bracelet",
+        "series":"brass collection",
         "name": "simple brass bracelet",
         "price": {
             "USD":22,
@@ -144,6 +150,7 @@
     {
         "id": "11",
         "category": "bracelet",
+        "series":"gemstone collection",
         "name": "autumn garnet bracelet",
         "price": {
             "USD":23,
@@ -172,6 +179,7 @@
     {
         "id": "13",
         "category": "bracelet",
+        "series":"flower collection",
         "name": "spring flowers bracelet",
         "price": {
             "USD":23,
@@ -186,6 +194,7 @@
     {
         "id": "14",
         "category": "bracelet",
+        "series":"flower collection",
         "name": "island flower bracelet",
         "price": {
             "USD":23,
@@ -228,6 +237,7 @@
     {
         "id": "17",
         "category": "bracelet",
+        "series":["moon collection","gemstone collection"],
         "name": "new moon bracelet",
         "price": {
             "USD":28,
@@ -242,6 +252,7 @@
     {
         "id": "18",
         "category": "bracelet",
+        "series":"gemstone collection",
         "name": "spring gemstone bracelet",
         "price": {
             "USD":28,
@@ -269,6 +280,7 @@
     {
         "id": "20",
         "category": "necklace",
+        "series":"gemstone collection",
         "name": "ocean apatite necklace",
         "price": {
             "USD":32,
@@ -282,6 +294,7 @@
     {
         "id": "21",
         "category": "necklace",
+        "series":"gemstone collection",
         "name": "autumn garnet necklace",
         "price": {
             "USD":28,
@@ -310,6 +323,7 @@
     {
         "id": "23",
         "category": "necklace",
+        "series":"flower collection",
         "name": "brass flower necklace",
         "price": {
             "USD":27,
@@ -324,6 +338,7 @@
     {
         "id": "24",
         "category": "necklace",
+        "series":["sun collection","gemstone collection"],
         "name": "sunset ocean necklace",
         "price": {
             "USD":25,
@@ -338,6 +353,7 @@
     {
         "id": "25",
         "category": "necklace",
+        "series":["moon collection","gemstone collection"],
         "name": "new moon necklace",
         "price": {
             "USD":32,
@@ -352,6 +368,7 @@
     {
         "id": "26",
         "category": "necklace",
+        "series":"flower collection",
         "name": "bali flower necklace",
         "price": {
             "USD":43,
@@ -366,6 +383,7 @@
     {
         "id": "27",
         "category": "necklace",
+        "series":"brass collection",
         "name": "simple brass necklace",
         "price": {
             "USD":27,
@@ -380,6 +398,7 @@
     {
         "id": "28",
         "category": "necklace",
+        "series":"flower collection",
         "name": "spring flowers necklace",
         "price": {
             "USD":27,
@@ -394,6 +413,7 @@
     {
         "id": "29",
         "category": "necklace",
+        "series":"moon collection",
         "name": "shell moon necklace",
         "price": {
             "USD":30,
@@ -422,6 +442,7 @@
     {
         "id": "31",
         "category": "anklet",
+        "series":"brass collection",
         "name": "simple brass anklet",
         "price": {
             "USD":22,

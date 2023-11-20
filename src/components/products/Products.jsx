@@ -1,8 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import productData from "../../products.json";
 import "./Products.scss";
 
 const Products = () => {
+  const [typeChange, setTypeChange] = useState("all");
+
+  const categoryChange = (e, category) => {
+    e.preventDefault();
+    setTypeChange(category);
+
+    console.log(typeChange);
+  };
+
+  const filterCategory = productData.filter((product) => {
+    if (typeChange === "all") {
+      return true;
+    } else {
+      return product.category === typeChange || product.series && product.series.includes(typeChange);
+    }
+  });
+
   return (
     <div className="products">
       <div className="container">
@@ -11,19 +28,29 @@ const Products = () => {
             <h2>SHOP</h2>
             <div className="group">
               <li>
-                <a href="">all</a>
+                <a href="" onClick={(e) => categoryChange(e, "all")}>
+                  all
+                </a>
               </li>
               <li>
-                <a href="">earrings</a>
+                <a href="" onClick={(e) => categoryChange(e, "earrings")}>
+                  earrings
+                </a>
               </li>
               <li>
-                <a href="">bracelet</a>
+                <a href="" onClick={(e) => categoryChange(e, "bracelet")}>
+                  bracelet
+                </a>
               </li>
               <li>
-                <a href="">necklace</a>
+                <a href="" onClick={(e) => categoryChange(e, "necklace")}>
+                  necklace
+                </a>
               </li>
               <li>
-                <a href="">anklet</a>
+                <a href="" onClick={(e) => categoryChange(e, "anklet")}>
+                  anklet
+                </a>
               </li>
               <li>
                 <a href="">crochet bag</a>
@@ -34,19 +61,19 @@ const Products = () => {
             <h2>SERIES</h2>
             <div className="group">
               <li>
-                <a href="">flower collection</a>
+                <a href="" onClick={(e) => categoryChange(e, "flower collection")}>flower collection</a>
               </li>
               <li>
-                <a href="">sun collection</a>
+                <a href="" onClick={(e) => categoryChange(e, "sun collection")}>sun collection</a>
               </li>
               <li>
-                <a href="">moon collection</a>
+                <a href="" onClick={(e) => categoryChange(e, "moon collection")}>moon collection</a>
               </li>
               <li>
-                <a href="">gemstone collection</a>
+                <a href="" onClick={(e) => categoryChange(e, "gemstone collection")}>gemstone collection</a>
               </li>
               <li>
-                <a href="">brass collection</a>
+                <a href="" onClick={(e) => categoryChange(e, "brass collection")}>brass collection</a>
               </li>
             </div>
           </ul>
@@ -70,18 +97,17 @@ const Products = () => {
             </div>
           </div>
           <div className="productList">
-            {productData.map(product=>(
-              <div key={product.id}>
+            {filterCategory.map((product) => (
+              <div key={product.id} className="wholeBox">
                 <div className="box">
-                <img src={product.img[0]} alt="" />
+                  <img src={product.img[0]} alt="" />
                 </div>
                 <div className="text">
-                <h3>{product.name}</h3>
-                <span>NT {product.price.NTD}</span>
+                  <h3>{product.name}</h3>
+                  <span>NT {product.price.NTD}</span>
                 </div>
               </div>
             ))}
-
           </div>
         </div>
       </div>
