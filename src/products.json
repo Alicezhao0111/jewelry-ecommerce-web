@@ -53,8 +53,404 @@
         },
         "option":["earring hooks", "ear clip"],
         "stock": 20,
-        "img": ["/src/assets/products/shellE1.jpg","/src/assets/products/shellE2.jpg","/src/assets/products/shellE3.jpg"],
+        "img": ["/src/assets/products/shellE2.jpg","/src/assets/products/shellE1.jpg","/src/assets/products/shellE3.jpg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "5",
+        "category": "earrings",
+        "name": "mermaid earrings",
+        "price": {
+            "USD":22,
+            "NTD":620
+        },
+        "option":["earring hooks", "ear clip"],
+        "stock": 20,
+        "img": ["/src/assets/products/mermaidE1.jpg","/src/assets/products/mermaidE2.jpg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "6",
+        "category": "earrings",
+        "name": "sun earrings",
+        "price": {
+            "USD":24,
+            "NTD":660
+        },
+        "option":["earring hooks", "ear clip"],
+        "stock": 20,
+        "img": ["/src/assets/products/sunE1.jpg","/src/assets/products/sunE2.jpg","/src/assets/products/sunE3.jpg","/src/assets/products/sunE4.jpg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "7",
+        "category": "bracelet",
+        "name": "sun bracelet",
+        "price": {
+            "USD":22,
+            "NTD":620
+        },
+        "color":["Dark brown","Rosy pink"],
+        "stock": 20,
+        "img": ["/src/assets/products/sunB1.jpg","/src/assets/products/sunB2.jpg","/src/assets/products/sunB3.jpg","/src/assets/products/sunB4.jpg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "8",
+        "category": "bracelet",
+        "name": "bali flower bracelet",
+        "price": {
+            "USD":30,
+            "NTD":880
+        },
+        "color":["Dark brown","Rosy pink"],
+        "stock": 20,
+        "img": ["/src/assets/products/baliB1.jpg","/src/assets/products/baliB2.jpg","/src/assets/products/baliB3.jpg","/src/assets/products/baliB4.jpg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "9",
+        "category": "bracelet",
+        "name": "brass flower bracelet",
+        "price": {
+            "USD":23,
+            "NTD":680
+        },
+        "color":["Dark brown","Rosy pink","Camel brown"],
+        "stock": 20,
+        "img": ["/src/assets/products/brassflowerB1.jpeg","/src/assets/products/brassflowerB2.jpeg","/src/assets/products/brassflowerB3.jpeg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "10",
+        "category": "bracelet",
+        "name": "simple brass bracelet",
+        "price": {
+            "USD":22,
+            "NTD":620
+        },
+        "color":["Dark brown","Rosy pink","Camel brown","Coral red"],
+        "stock": 20,
+        "img": ["/src/assets/products/brassB1.jpg","/src/assets/products/brassB2.jpg","/src/assets/products/brassB3.jpg","/src/assets/products/brassB4.jpg","/src/assets/products/brassB5.jpg","/src/assets/products/brassB6.jpg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "11",
+        "category": "bracelet",
+        "name": "autumn garnet bracelet",
+        "price": {
+            "USD":23,
+            "NTD":680
+        },
+        "color":["Dark brown","Rosy pink","Camel brown"],
+        "stock": 20,
+        "img": ["/src/assets/products/garnetB1.jpg","/src/assets/products/garnetB2.jpg","/src/assets/products/garnetB3.jpg","/src/assets/products/garnetB4.jpg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "12",
+        "category": "bracelet",
+        "name": "dreamy planet bracelet",
+        "price": {
+            "USD":22,
+            "NTD":620
+        },
+        "color":["Starry night","Desert sunset"],
+        "stock": 20,
+        "img": ["/src/assets/products/beadsB1.jpg","/src/assets/products/beadsB2.jpg","/src/assets/products/beadsB3.jpg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "13",
+        "category": "bracelet",
+        "name": "spring flowers bracelet",
+        "price": {
+            "USD":23,
+            "NTD":680
+        },
+        "color":["Dark brown","Rosy pink","Camel brown"],
+        "stock": 20,
+        "img": ["/src/assets/products/flowersB1.jpg","/src/assets/products/flowersB2.jpg","/src/assets/products/flowersB3.jpg","/src/assets/products/flowersB4.jpg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "14",
+        "category": "bracelet",
+        "name": "island flower bracelet",
+        "price": {
+            "USD":23,
+            "NTD":680
+        },
+        "color":["Dark brown","Rosy pink","Camel brown"],
+        "stock": 20,
+        "img": ["/src/assets/products/islandflowerB1.jpg","/src/assets/products/islandflowerB2.jpg","/src/assets/products/islandflowerB3.jpg","/src/assets/products/islandflowerB4.jpg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "15",
+        "category": "bracelet",
+        "name": "starry night bracelet",
+        "price": {
+            "USD":23,
+            "NTD":680
+        },
+        "color":["Dark brown","Rosy pink","Camel brown"],
+        "stock": 20,
+        "img": ["/src/assets/products/starB1.jpg","/src/assets/products/starB2.jpg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "16",
+        "category": "bracelet",
+        "name": "retro czech bracelet",
+        "price": {
+            "USD":23,
+            "NTD":680
+        },
+        "color":["Dark brown","Rosy pink","Camel brown"],
+        "stock": 20,
+        "img": ["/src/assets/products/squareB1.jpg","/src/assets/products/squareB2.jpg","/src/assets/products/squareB3.jpg","/src/assets/products/squareB4.jpg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "17",
+        "category": "bracelet",
+        "name": "new moon bracelet",
+        "price": {
+            "USD":28,
+            "NTD":820
+        },
+        "color":["Dark brown","Rosy pink"],
+        "stock": 20,
+        "img": ["/src/assets/products/newmoonB1.jpg","/src/assets/products/newmoonB2.jpg","/src/assets/products/newmoonB3.jpg","/src/assets/products/newmoonB4.jpg","/src/assets/products/newmoonB5.jpg","/src/assets/products/newmoonB6.jpg","/src/assets/products/newmoonB7.jpg","/src/assets/products/newmoonB8.jpg","/src/assets/products/newmoonB9.jpg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "18",
+        "category": "bracelet",
+        "name": "spring gemstone bracelet",
+        "price": {
+            "USD":28,
+            "NTD":820
+        },
+        "stock": 20,
+        "img": ["/src/assets/products/springbayB1.png","/src/assets/products/springbayB2.jpg","/src/assets/products/springbayB3.jpg","/src/assets/products/springbayB4.jpg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "19",
+        "category": "bracelet",
+        "name": "snowy lake bracelet",
+        "price": {
+            "USD":23,
+            "NTD":680
+        },
+        "color":["Dark brown","Rosy pink","Camel brown"],
+        "stock": 20,
+        "img": ["/src/assets/products/snowB1.jpg","/src/assets/products/snowB2.jpg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "20",
+        "category": "necklace",
+        "name": "ocean apatite necklace",
+        "price": {
+            "USD":32,
+            "NTD":920
+        },
+        "stock": 20,
+        "img": ["/src/assets/products/oceanN1.jpeg","/src/assets/products/oceanN2.jpg","/src/assets/products/oceanN3.jpg","/src/assets/products/oceanN4.jpeg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "21",
+        "category": "necklace",
+        "name": "autumn garnet necklace",
+        "price": {
+            "USD":28,
+            "NTD":820
+        },
+        "color":["Dark brown","Rosy pink","Camel brown"],
+        "stock": 20,
+        "img": ["/src/assets/products/garnetN1.jpg","/src/assets/products/garnetN2.jpg","/src/assets/products/garnetN3.jpg","/src/assets/products/garnetN4.jpg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "22",
+        "category": "necklace",
+        "name": "dreamy planet necklace",
+        "price": {
+            "USD":22,
+            "NTD":660
+        },
+        "color":["Starry night","Desert sunset"],
+        "stock": 20,
+        "img": ["/src/assets/products/beadsN1.jpeg","/src/assets/products/beadsN2.jpg","/src/assets/products/beadsN3.jpeg","/src/assets/products/beadsN4.jpeg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "23",
+        "category": "necklace",
+        "name": "brass flower necklace",
+        "price": {
+            "USD":27,
+            "NTD":780
+        },
+        "color":["Dark brown","Rosy pink","Camel brown"],
+        "stock": 20,
+        "img": ["/src/assets/products/brassflowerN1.jpg","/src/assets/products/brassflowerN2.jpeg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "24",
+        "category": "necklace",
+        "name": "sunset ocean necklace",
+        "price": {
+            "USD":25,
+            "NTD":720
+        },
+        "color":["Dark brown","Rosy pink","Camel brown","Coral red"],
+        "stock": 20,
+        "img": ["/src/assets/products/sunsetN1.jpg","/src/assets/products/sunsetN2.jpg","/src/assets/products/sunsetN3.jpg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "25",
+        "category": "necklace",
+        "name": "new moon necklace",
+        "price": {
+            "USD":32,
+            "NTD":920
+        },
+        "color":["Dark brown","Rosy pink","Camel brown"],
+        "stock": 20,
+        "img": ["/src/assets/products/newmoonN1.jpg","/src/assets/products/newmoonN2.jpg","/src/assets/products/newmoonN3.jpg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "26",
+        "category": "necklace",
+        "name": "bali flower necklace",
+        "price": {
+            "USD":43,
+            "NTD":1280
+        },
+        "color":["Dark brown","Rosy pink"],
+        "stock": 20,
+        "img": ["/src/assets/products/baliN1.jpg","/src/assets/products/baliN2.jpg","/src/assets/products/baliN3.jpg","/src/assets/products/baliN4.jpg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "27",
+        "category": "necklace",
+        "name": "simple brass necklace",
+        "price": {
+            "USD":27,
+            "NTD":780
+        },
+        "color":["Dark brown","Rosy pink","Camel brown","Coral red"],
+        "stock": 20,
+        "img": ["/src/assets/products/brassN1.jpg","/src/assets/products/brassN2.jpg","/src/assets/products/brassN3.jpg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "28",
+        "category": "necklace",
+        "name": "spring flowers necklace",
+        "price": {
+            "USD":27,
+            "NTD":780
+        },
+        "color":["Dark brown","Rosy pink","Camel brown"],
+        "stock": 20,
+        "img": ["/src/assets/products/flowersN1.jpg","/src/assets/products/flowersN2.jpg","/src/assets/products/flowersN3.jpg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "29",
+        "category": "necklace",
+        "name": "shell moon necklace",
+        "price": {
+            "USD":30,
+            "NTD":880
+        },
+        "color":["Dark brown","Rosy pink","Camel brown"],
+        "stock": 20,
+        "img": ["/src/assets/products/whitemoonN1.jpg","/src/assets/products/whitemoonN2.jpg","/src/assets/products/whitemoonN3.jpg","/src/assets/products/whitemoonN4.jpg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "30",
+        "category": "necklace",
+        "name": "snowy lake necklace",
+        "price": {
+            "USD":25,
+            "NTD":720
+        },
+        "color":["Dark brown","Rosy pink","Camel brown"],
+        "stock": 20,
+        "img": ["/src/assets/products/snowN1.jpg","/src/assets/products/snowN2.jpg","/src/assets/products/snowN3.jpg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "31",
+        "category": "anklet",
+        "name": "simple brass anklet",
+        "price": {
+            "USD":22,
+            "NTD":620
+        },
+        "color":["Dark brown","Rosy pink","Camel brown","Coral red"],
+        "stock": 20,
+        "img": ["/src/assets/products/brassA1.jpg","/src/assets/products/brassA2.jpg","/src/assets/products/brassA3.jpg"],
+        "shipping": 1,
+        "quantity": 0
+    },
+    {
+        "id": "32",
+        "category": "anklet",
+        "name": "retro czech anklet",
+        "price": {
+            "USD":27,
+            "NTD":780
+        },
+        "color":["Dark brown","Rosy pink","Camel brown","Coral red"],
+        "stock": 20,
+        "img": ["/src/assets/products/roundflowerA1.jpg","/src/assets/products/roundflowerA2.jpg","/src/assets/products/roundflowerA3.jpg"],
         "shipping": 1,
         "quantity": 0
     }
+
+
+
+
+
+
 ]
