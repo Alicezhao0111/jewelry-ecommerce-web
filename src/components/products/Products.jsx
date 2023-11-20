@@ -53,7 +53,7 @@ const Products = () => {
                 </a>
               </li>
               <li>
-                <a href="">crochet bag</a>
+                <a href="" onClick={(e) => categoryChange(e, "crochet bag")}>crochet bag</a>
               </li>
             </div>
           </ul>
