@@ -4,21 +4,49 @@ import "./Products.scss";
 
 const Products = () => {
   const [typeChange, setTypeChange] = useState("all");
+  const [currency, setCurrency] = useState("");
+  const [displayProducts, setDisplayProducts] = useState(productData);
+  
 
+  //顯示分類產品
   const categoryChange = (e, category) => {
     e.preventDefault();
     setTypeChange(category);
 
     console.log(typeChange);
+ 
+  const filtered = productData.filter((product) => {
+    return category === "all" ? true : product.category===category|| product.series && product.series.includes(category);
+
+  });
+  setDisplayProducts(filtered);
+
+};
+
+  // 排序改變處理
+  const handleSortChange = (event) => {
+    sortProducts(event.target.value);
   };
 
-  const filterCategory = productData.filter((product) => {
-    if (typeChange === "all") {
-      return true;
-    } else {
-      return product.category === typeChange || product.series && product.series.includes(typeChange);
-    }
-  });
+  //排序管理
+  const sortProducts = (sortType)=>{
+    let sorted = [...displayProducts];
+    if (sortType==="price"){
+    sorted.sort((a,b)=>a.price.NTD-b.price.NTD);
+  }else if (sortType==="date"){
+    sorted.sort((a,b)=>b.id-a.id);
+  }
+  setDisplayProducts(sorted)
+  }
+  
+
+  //轉換貨幣
+
+  const currencyChange = (event)=>{
+    setCurrency(event.target.value);
+    console.log(event.target.value);
+  }
+
 
   return (
     <div className="products">
@@ -85,26 +113,26 @@ const Products = () => {
               let each piece rekindle your goals in moments of doubt.
             </h2>
             <div className="function">
-              <select name="currency" id="currency">
-                <option value="USD">USD</option>
-                <option value="NTD">NTD</option>
+              <select name="currency" id="currency" onChange={currencyChange}>
+                <option value="NTD" >NTD</option>
+                <option value="USD" >USD</option>
               </select>
-              <select name="sort" id="sort">
+              <select name="sort" id="sort" onChange={handleSortChange}>
                 <option value="">SORT BY</option>
                 <option value="date">Date, new to old</option>
-                <option value="price">Price, low to high</option>
+                <option value="price" >Price, low to high</option>
               </select>
             </div>
           </div>
           <div className="productList">
-            {filterCategory.map((product) => (
+            {displayProducts.map((product) => (
               <div key={product.id} className="wholeBox">
                 <div className="box">
                   <img src={product.img[0]} alt="" />
                 </div>
                 <div className="text">
                   <h3>{product.name}</h3>
-                  <span>NT {product.price.NTD}</span>
+                  <span>{currency==="USD"?` USD ${product.price.USD}`:`NT ${product.price.NTD}`}</span>
                 </div>
               </div>
             ))}

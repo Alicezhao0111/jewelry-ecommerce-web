@@ -36,7 +36,7 @@
         "series":"flower collection",
         "name": "flower earrings",
         "price": {
-            "USD":24,
+            "USD":22,
             "NTD":660
         },
         "option":["earring hooks", "ear clip"],
@@ -79,7 +79,7 @@
         "series":"sun collection",
         "name": "sun earrings",
         "price": {
-            "USD":24,
+            "USD":22,
             "NTD":660
         },
         "option":["earring hooks", "ear clip"],
