@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./Products.scss";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   const [products, setProducts] =useState([]);
   const [typeChange, setTypeChange] = useState("all");
   const [currency, setCurrency] = useState("");
   const [displayProducts, setDisplayProducts] = useState(products);
+  const [sortType, setSortType]=useState("");
+  
+  
 
   useEffect(()=>{
     async function fetchData(){
@@ -13,6 +17,7 @@ const Products = () => {
         const response = await fetch('products.json');
         const data = await response.json();
         setProducts(data);
+        setDisplayProducts(data);
 
       }catch(err){
         console.log("fetch data error", err);
@@ -22,37 +27,36 @@ const Products = () => {
     fetchData();
   },[])
 
-  //顯示分類產品
-  const categoryChange = (e, category) => {
-    e.preventDefault();
-    setTypeChange(category);
 
-    console.log(typeChange);
- 
-  const filtered = products.filter((product) => {
-    return category === "all" ? true : product.category===category|| product.series && product.series.includes(category);
 
-  });
-  setDisplayProducts(filtered);
+  
+  const sortProducts = (sortType, productsToSort) => {
+    if (sortType === "price") {
+      return productsToSort.sort((a, b) => a.price.NTD - b.price.NTD);
+    } else if (sortType === "date") {
+      return productsToSort.sort((a, b) => b.id - a.id);
+    }
+    return productsToSort;
 
-};
-
-  // 排序改變處理
-  const handleSortChange = (event) => {
-    sortProducts(event.target.value);
   };
 
-  //排序管理
-  const sortProducts = (sortType)=>{
-    let sorted = [...displayProducts];
-    if (sortType==="price"){
-    sorted.sort((a,b)=>a.price.NTD-b.price.NTD);
-  }else if (sortType==="date"){
-    sorted.sort((a,b)=>b.id-a.id);
-  }
-  setDisplayProducts(sorted)
-  }
+    //
+    const handleSortChange = (event) => {
+    const newSortType = event.target.value;
+    setSortType(newSortType);
+    console.log(sortType);
+    setDisplayProducts(sortProducts(newSortType, displayProducts));
+  };
+
+    const categoryChange = (e, category) => {
+    e.preventDefault();
+    setTypeChange(category);
   
+    const filtered = products.filter((product) => {
+      return category === "all" ? true : product.category === category || (product.series && product.series.includes(category));
+    });
+    setDisplayProducts(sortProducts(sortType, filtered));
+  };
 
   //轉換貨幣
 
@@ -132,7 +136,7 @@ const Products = () => {
                 <option value="USD" >USD</option>
               </select>
               <select name="sort" id="sort" onChange={handleSortChange}>
-                <option value="">SORT BY</option>
+                <option>SORT BY</option>
                 <option value="date">Date, new to old</option>
                 <option value="price" >Price, low to high</option>
               </select>
@@ -141,9 +145,12 @@ const Products = () => {
           <div className="productList">
             {displayProducts.map((product) => (
               <div key={product.id} className="wholeBox">
+                <Link to={`/shop/${product.id}`}>
                 <div className="box">
-                  <img src={product.img[0]} alt="" />
+                  <img className="showImg" src={product.img[0]} alt="" />
+                  <img className="hoverImg" src={product.img[1]} alt="" />
                 </div>
+                </Link>
                 <div className="text">
                   <h3>{product.name}</h3>
                   <span>{currency==="USD"?` USD ${product.price.USD}`:`NT ${product.price.NTD}`}</span>
