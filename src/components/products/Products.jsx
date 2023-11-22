@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import productData from "../../products.json";
+import productData from "../../../public/products.json";
 import "./Products.scss";
 
 const Products = () => {

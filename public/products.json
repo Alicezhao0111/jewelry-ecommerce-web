@@ -11,7 +11,7 @@
         "color":["Starry night","Desert sunset"],
         "option":["earring hooks", "ear clip"],
         "stock": 20,
-        "img": ["/src/assets/products/nebula1.jpg","/src/assets/products/nebula2.jpg","/src/assets/products/nebula3.jpg","/src/assets/products/nebula4.jpg","/src/assets/products/nebula5.jpg"],
+        "img": ["/images/products/nebula1.jpg","/images/products/nebula2.jpg","/images/products/nebula3.jpg","/images/products/nebula4.jpg","/images/products/nebula5.jpg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -26,7 +26,7 @@
         "color":["Starry night","Desert sunset"],
         "option":["earring hooks", "ear clip"],
         "stock": 20,
-        "img": ["/src/assets/products/mars1.jpg","/src/assets/products/mars2.jpg","/src/assets/products/mars3.jpg","/src/assets/products/mars4.jpg"],
+        "img": ["/images/products/mars1.jpg","/images/products/mars2.jpg","/images/products/mars3.jpg","/images/products/mars4.jpg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -41,7 +41,7 @@
         },
         "option":["earring hooks", "ear clip"],
         "stock": 20,
-        "img": ["/src/assets/products/flowerE1.jpg","/src/assets/products/flowerE2.jpg","/src/assets/products/flowerE3.jpg","/src/assets/products/flowerE4.jpg","/src/assets/products/flowerE5.jpg"],
+        "img": ["/images/products/flowerE1.jpg","/images/products/flowerE2.jpg","/images/products/flowerE3.jpg","/images/products/flowerE4.jpg","/images/products/flowerE5.jpg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -55,7 +55,7 @@
         },
         "option":["earring hooks", "ear clip"],
         "stock": 20,
-        "img": ["/src/assets/products/shellE2.jpg","/src/assets/products/shellE1.jpg","/src/assets/products/shellE3.jpg"],
+        "img": ["/images/products/shellE2.jpg","/images/products/shellE1.jpg","/images/products/shellE3.jpg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -69,7 +69,7 @@
         },
         "option":["earring hooks", "ear clip"],
         "stock": 20,
-        "img": ["/src/assets/products/mermaidE1.jpg","/src/assets/products/mermaidE2.jpg"],
+        "img": ["/images/products/mermaidE1.jpg","/images/products/mermaidE2.jpg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -84,7 +84,7 @@
         },
         "option":["earring hooks", "ear clip"],
         "stock": 20,
-        "img": ["/src/assets/products/sunE1.jpg","/src/assets/products/sunE2.jpg","/src/assets/products/sunE3.jpg","/src/assets/products/sunE4.jpg"],
+        "img": ["/images/products/sunE1.jpg","/images/products/sunE2.jpg","/images/products/sunE3.jpg","/images/products/sunE4.jpg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -99,7 +99,7 @@
         },
         "color":["Dark brown","Rosy pink"],
         "stock": 20,
-        "img": ["/src/assets/products/sunB1.jpg","/src/assets/products/sunB2.jpg","/src/assets/products/sunB3.jpg","/src/assets/products/sunB4.jpg"],
+        "img": ["/images/products/sunB1.jpg","/images/products/sunB2.jpg","/images/products/sunB3.jpg","/images/products/sunB4.jpg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -114,7 +114,7 @@
         },
         "color":["Dark brown","Rosy pink"],
         "stock": 20,
-        "img": ["/src/assets/products/baliB1.jpg","/src/assets/products/baliB2.jpg","/src/assets/products/baliB3.jpg","/src/assets/products/baliB4.jpg"],
+        "img": ["/images/products/baliB1.jpg","/images/products/baliB2.jpg","/images/products/baliB3.jpg","/images/products/baliB4.jpg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -129,7 +129,7 @@
         },
         "color":["Dark brown","Rosy pink","Camel brown"],
         "stock": 20,
-        "img": ["/src/assets/products/brassflowerB1.jpeg","/src/assets/products/brassflowerB2.jpeg","/src/assets/products/brassflowerB3.jpeg"],
+        "img": ["/images/products/brassflowerB1.jpeg","/images/products/brassflowerB2.jpeg","/images/products/brassflowerB3.jpeg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -144,7 +144,7 @@
         },
         "color":["Dark brown","Rosy pink","Camel brown","Coral red"],
         "stock": 20,
-        "img": ["/src/assets/products/brassB1.jpg","/src/assets/products/brassB2.jpg","/src/assets/products/brassB3.jpg","/src/assets/products/brassB4.jpg","/src/assets/products/brassB5.jpg","/src/assets/products/brassB6.jpg"],
+        "img": ["/images/products/brassB1.jpg","/images/products/brassB2.jpg","/images/products/brassB3.jpg","/images/products/brassB4.jpg","/images/products/brassB5.jpg","/images/products/brassB6.jpg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -159,7 +159,7 @@
         },
         "color":["Dark brown","Rosy pink","Camel brown"],
         "stock": 20,
-        "img": ["/src/assets/products/garnetB1.jpg","/src/assets/products/garnetB2.jpg","/src/assets/products/garnetB3.jpg","/src/assets/products/garnetB4.jpg"],
+        "img": ["/images/products/garnetB1.jpg","/images/products/garnetB2.jpg","/images/products/garnetB3.jpg","/images/products/garnetB4.jpg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -173,7 +173,7 @@
         },
         "color":["Starry night","Desert sunset"],
         "stock": 20,
-        "img": ["/src/assets/products/beadsB1.jpg","/src/assets/products/beadsB2.jpg","/src/assets/products/beadsB3.jpg"],
+        "img": ["/images/products/beadsB1.jpg","/images/products/beadsB2.jpg","/images/products/beadsB3.jpg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -188,7 +188,7 @@
         },
         "color":["Dark brown","Rosy pink","Camel brown"],
         "stock": 20,
-        "img": ["/src/assets/products/flowersB1.jpg","/src/assets/products/flowersB2.jpg","/src/assets/products/flowersB3.jpg","/src/assets/products/flowersB4.jpg"],
+        "img": ["/images/products/flowersB1.jpg","/images/products/flowersB2.jpg","/images/products/flowersB3.jpg","/images/products/flowersB4.jpg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -203,7 +203,7 @@
         },
         "color":["Dark brown","Rosy pink","Camel brown"],
         "stock": 20,
-        "img": ["/src/assets/products/islandflowerB1.jpg","/src/assets/products/islandflowerB2.jpg","/src/assets/products/islandflowerB3.jpg","/src/assets/products/islandflowerB4.jpg"],
+        "img": ["/images/products/islandflowerB1.jpg","/images/products/islandflowerB2.jpg","/images/products/islandflowerB3.jpg","/images/products/islandflowerB4.jpg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -217,7 +217,7 @@
         },
         "color":["Dark brown","Rosy pink","Camel brown"],
         "stock": 20,
-        "img": ["/src/assets/products/starB1.jpg","/src/assets/products/starB2.jpg"],
+        "img": ["/images/products/starB1.jpg","/images/products/starB2.jpg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -231,7 +231,7 @@
         },
         "color":["Dark brown","Rosy pink","Camel brown"],
         "stock": 20,
-        "img": ["/src/assets/products/squareB1.jpg","/src/assets/products/squareB2.jpg","/src/assets/products/squareB3.jpg","/src/assets/products/squareB4.jpg"],
+        "img": ["/images/products/squareB1.jpg","/images/products/squareB2.jpg","/images/products/squareB3.jpg","/images/products/squareB4.jpg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -246,7 +246,7 @@
         },
         "color":["Dark brown","Rosy pink"],
         "stock": 20,
-        "img": ["/src/assets/products/newmoonB1.jpg","/src/assets/products/newmoonB2.jpg","/src/assets/products/newmoonB3.jpg","/src/assets/products/newmoonB4.jpg","/src/assets/products/newmoonB5.jpg","/src/assets/products/newmoonB6.jpg","/src/assets/products/newmoonB7.jpg","/src/assets/products/newmoonB8.jpg","/src/assets/products/newmoonB9.jpg"],
+        "img": ["/images/products/newmoonB1.jpg","/images/products/newmoonB2.jpg","/images/products/newmoonB3.jpg","/images/products/newmoonB4.jpg","/images/products/newmoonB5.jpg","/images/products/newmoonB6.jpg","/images/products/newmoonB7.jpg","/images/products/newmoonB8.jpg","/images/products/newmoonB9.jpg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -260,7 +260,7 @@
             "NTD":820
         },
         "stock": 20,
-        "img": ["/src/assets/products/springbayB1.png","/src/assets/products/springbayB2.jpg","/src/assets/products/springbayB3.jpg","/src/assets/products/springbayB4.jpg"],
+        "img": ["/images/products/springbayB1.png","/images/products/springbayB2.jpg","/images/products/springbayB3.jpg","/images/products/springbayB4.jpg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -274,7 +274,7 @@
         },
         "color":["Dark brown","Rosy pink","Camel brown"],
         "stock": 20,
-        "img": ["/src/assets/products/snowB1.jpg","/src/assets/products/snowB2.jpg"],
+        "img": ["/images/products/snowB1.jpg","/images/products/snowB2.jpg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -288,7 +288,7 @@
             "NTD":920
         },
         "stock": 20,
-        "img": ["/src/assets/products/oceanN1.jpg","/src/assets/products/oceanN2.jpg","/src/assets/products/oceanN3.jpg","/src/assets/products/oceanN4.jpeg"],
+        "img": ["/images/products/oceanN1.jpg","/images/products/oceanN2.jpg","/images/products/oceanN3.jpg","/images/products/oceanN4.jpeg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -303,7 +303,7 @@
         },
         "color":["Dark brown","Rosy pink","Camel brown"],
         "stock": 20,
-        "img": ["/src/assets/products/garnetN1.jpg","/src/assets/products/garnetN2.jpg","/src/assets/products/garnetN3.jpg","/src/assets/products/garnetN4.jpg"],
+        "img": ["/images/products/garnetN1.jpg","/images/products/garnetN2.jpg","/images/products/garnetN3.jpg","/images/products/garnetN4.jpg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -317,7 +317,7 @@
         },
         "color":["Starry night","Desert sunset"],
         "stock": 20,
-        "img": ["/src/assets/products/beadsN1.jpg","/src/assets/products/beadsN2.jpg","/src/assets/products/beadsN3.jpeg","/src/assets/products/beadsN4.jpeg"],
+        "img": ["/images/products/beadsN1.jpg","/images/products/beadsN2.jpg","/images/products/beadsN3.jpeg","/images/products/beadsN4.jpeg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -332,7 +332,7 @@
         },
         "color":["Dark brown","Rosy pink","Camel brown"],
         "stock": 20,
-        "img": ["/src/assets/products/brassflowerN1.jpg","/src/assets/products/brassflowerN2.jpeg"],
+        "img": ["/images/products/brassflowerN1.jpg","/images/products/brassflowerN2.jpeg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -347,7 +347,7 @@
         },
         "color":["Dark brown","Rosy pink","Camel brown","Coral red"],
         "stock": 20,
-        "img": ["/src/assets/products/sunsetN1.jpg","/src/assets/products/sunsetN2.jpg","/src/assets/products/sunsetN3.jpg"],
+        "img": ["/images/products/sunsetN1.jpg","/images/products/sunsetN2.jpg","/images/products/sunsetN3.jpg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -362,7 +362,7 @@
         },
         "color":["Dark brown","Rosy pink","Camel brown"],
         "stock": 20,
-        "img": ["/src/assets/products/newmoonN1.jpg","/src/assets/products/newmoonN2.jpg","/src/assets/products/newmoonN3.jpg"],
+        "img": ["/images/products/newmoonN1.jpg","/images/products/newmoonN2.jpg","/images/products/newmoonN3.jpg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -377,7 +377,7 @@
         },
         "color":["Dark brown","Rosy pink"],
         "stock": 20,
-        "img": ["/src/assets/products/baliN1.jpg","/src/assets/products/baliN2.jpg","/src/assets/products/baliN3.jpg","/src/assets/products/baliN4.jpg"],
+        "img": ["/images/products/baliN1.jpg","/images/products/baliN2.jpg","/images/products/baliN3.jpg","/images/products/baliN4.jpg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -392,7 +392,7 @@
         },
         "color":["Dark brown","Rosy pink","Camel brown","Coral red"],
         "stock": 20,
-        "img": ["/src/assets/products/brassN1.jpg","/src/assets/products/brassN2.jpg","/src/assets/products/brassN3.jpg"],
+        "img": ["/images/products/brassN1.jpg","/images/products/brassN2.jpg","/images/products/brassN3.jpg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -407,7 +407,7 @@
         },
         "color":["Dark brown","Rosy pink","Camel brown"],
         "stock": 20,
-        "img": ["/src/assets/products/flowersN1.jpg","/src/assets/products/flowersN2.jpg","/src/assets/products/flowersN3.jpg"],
+        "img": ["/images/products/flowersN1.jpg","/images/products/flowersN2.jpg","/images/products/flowersN3.jpg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -422,7 +422,7 @@
         },
         "color":["Dark brown","Rosy pink","Camel brown"],
         "stock": 20,
-        "img": ["/src/assets/products/whitemoonN1.jpg","/src/assets/products/whitemoonN2.jpg","/src/assets/products/whitemoonN3.jpg","/src/assets/products/whitemoonN4.jpg"],
+        "img": ["/images/products/whitemoonN1.jpg","/images/products/whitemoonN2.jpg","/images/products/whitemoonN3.jpg","/images/products/whitemoonN4.jpg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -436,7 +436,7 @@
         },
         "color":["Dark brown","Rosy pink","Camel brown"],
         "stock": 20,
-        "img": ["/src/assets/products/snowN1.jpg","/src/assets/products/snowN2.jpg","/src/assets/products/snowN3.jpg"],
+        "img": ["/images/products/snowN1.jpg","/images/products/snowN2.jpg","/images/products/snowN3.jpg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -451,7 +451,7 @@
         },
         "color":["Dark brown","Rosy pink","Camel brown","Coral red"],
         "stock": 20,
-        "img": ["/src/assets/products/brassA1.jpg","/src/assets/products/brassA2.jpg","/src/assets/products/brassA3.jpg"],
+        "img": ["/images/products/brassA1.jpg","/images/products/brassA2.jpg","/images/products/brassA3.jpg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -465,7 +465,7 @@
         },
         "color":["Dark brown","Rosy pink","Camel brown","Coral red"],
         "stock": 20,
-        "img": ["/src/assets/products/roundflowerA1.jpg","/src/assets/products/roundflowerA2.jpg","/src/assets/products/roundflowerA3.jpg"],
+        "img": ["/images/products/roundflowerA1.jpg","/images/products/roundflowerA2.jpg","/images/products/roundflowerA3.jpg"],
         "shipping": 1,
         "quantity": 0
     },
@@ -479,7 +479,7 @@
         },
         "color":["Natural beige","Milk tea","Camel brown"],
         "stock": 20,
-        "img": ["/src/assets/products/netbagG1.jpg","/src/assets/products/netbagG2.jpg","/src/assets/products/netbagG3.jpg"],
+        "img": ["/images/products/netbagG1.jpg","/images/products/netbagG2.jpg","/images/products/netbagG3.jpg"],
         "shipping": 1,
         "quantity": 0
     }
