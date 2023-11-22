@@ -1,11 +1,28 @@
-import React, { useState } from "react";
-import productData from "../../../public/products.json";
+import React, { useEffect, useState } from "react";
 import "./Products.scss";
 
 const Products = () => {
+  const [products, setProducts] =useState([]);
   const [typeChange, setTypeChange] = useState("all");
   const [currency, setCurrency] = useState("");
-  const [displayProducts, setDisplayProducts] = useState(productData);
+  const [displayProducts, setDisplayProducts] = useState(products);
+
+  useEffect(()=>{
+    async function fetchData(){
+      try{
+        const response = await fetch('products.json');
+        const data = await response.json();
+        setProducts(data);
+
+      }catch(err){
+        console.log("fetch data error", err);
+
+      }
+    }
+    fetchData();
+  },[])
+
+  console.log(products);
   
 
   //顯示分類產品
@@ -15,7 +32,7 @@ const Products = () => {
 
     console.log(typeChange);
  
-  const filtered = productData.filter((product) => {
+  const filtered = products.filter((product) => {
     return category === "all" ? true : product.category===category|| product.series && product.series.includes(category);
 
   });
