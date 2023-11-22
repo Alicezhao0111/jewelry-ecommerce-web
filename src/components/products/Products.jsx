@@ -22,9 +22,6 @@ const Products = () => {
     fetchData();
   },[])
 
-  console.log(products);
-  
-
   //顯示分類產品
   const categoryChange = (e, category) => {
     e.preventDefault();
