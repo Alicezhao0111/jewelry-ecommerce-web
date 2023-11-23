@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./Products.scss";
 import { Link } from "react-router-dom";
+import Pagination from "../pagination/pagination";
 
 const Products = () => {
   const [products, setProducts] =useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage, setPostsPerPage] = useState(12);
   const [typeChange, setTypeChange] = useState("all");
   const [currency, setCurrency] = useState("");
   const [displayProducts, setDisplayProducts] = useState(products);
@@ -27,8 +30,15 @@ const Products = () => {
     fetchData();
   },[])
 
+  //設定頁面
+  const lastPostIndex = postsPerPage * currentPage;
+  const firstPostIndex = lastPostIndex - postsPerPage;
+  const currentPosts = displayProducts.slice(firstPostIndex,lastPostIndex);
+
+  useEffect(()=>{window.scrollTo(0,0);},[firstPostIndex]);
 
 
+  //排序商品
   
   const sortProducts = (sortType, productsToSort) => {
     if (sortType === "price") {
@@ -40,7 +50,7 @@ const Products = () => {
 
   };
 
-    //
+    
     const handleSortChange = (event) => {
     const newSortType = event.target.value;
     setSortType(newSortType);
@@ -48,6 +58,7 @@ const Products = () => {
     setDisplayProducts(sortProducts(newSortType, displayProducts));
   };
 
+    //分類商品加排序
     const categoryChange = (e, category) => {
     e.preventDefault();
     setTypeChange(category);
@@ -143,7 +154,7 @@ const Products = () => {
             </div>
           </div>
           <div className="productList">
-            {displayProducts.map((product) => (
+            {currentPosts.map((product) => (
               <div key={product.id} className="wholeBox">
                 <Link to={`/shop/${product.id}`}>
                 <div className="box">
@@ -157,6 +168,10 @@ const Products = () => {
                 </div>
               </div>
             ))}
+            
+          </div>
+          <div className="pageBox">
+          <Pagination totalPosts={displayProducts.length} postsPerPage={postsPerPage} setCurrentPage={setCurrentPage} />
           </div>
         </div>
       </div>
