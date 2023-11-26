@@ -2,13 +2,33 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    
+
+    .svgBox{
+        display: flex;
+        align-items: center;
+        justify-content:space-around;
+    }
+
+    svg{
+        width: 50%;
+    }
 
     .pageBtn{
+        font-family: Gilda Display;
+        font-size: 0.9rem;
         color: #6F6152;
         border: none;
         cursor: pointer;
 
+    }
+    .pageBtnActive{
+        font-family: Gilda Display;
+        font-size: 1.1rem;
+        position: relative;
+        color: #B14E31;
+        border: none;
+        cursor: pointer;
+        
     }
     
 }

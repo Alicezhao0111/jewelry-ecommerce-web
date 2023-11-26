@@ -35,8 +35,6 @@ const Products = () => {
   const firstPostIndex = lastPostIndex - postsPerPage;
   const currentPosts = displayProducts.slice(firstPostIndex,lastPostIndex);
 
-  useEffect(()=>{window.scrollTo(0,0);},[firstPostIndex]);
-
 
   //排序商品
   
@@ -171,7 +169,7 @@ const Products = () => {
             
           </div>
           <div className="pageBox">
-          <Pagination totalPosts={displayProducts.length} postsPerPage={postsPerPage} setCurrentPage={setCurrentPage} />
+          <Pagination totalPosts={displayProducts.length} postsPerPage={postsPerPage} setCurrentPage={setCurrentPage} currentPage={currentPage} />
           </div>
         </div>
       </div>
