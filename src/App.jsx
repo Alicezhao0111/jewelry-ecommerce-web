@@ -12,6 +12,7 @@ import Shop from "./pages/Shop/Shop";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import "./reset.scss"
+import Product from "./pages/product/product";
 
 const Layout = () => {
   const location = useLocation();
@@ -24,6 +25,7 @@ const Layout = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
+        <Route path="/shop/:productID" element={<Product/>}/>
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/faq" element={<Faq />} />
