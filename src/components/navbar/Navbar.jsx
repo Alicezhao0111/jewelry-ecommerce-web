@@ -21,20 +21,15 @@ const Navbar = () => {
     setActiveItem(activePath); //動畫底線
 
     function changeBg(){ //nav樣式設定
-      const path = location.pathname;
-      
-      if (path==="/shop"){
-        setDarkBg(true);
-      }else{
-        setDarkBg(false);
-      }
+      const hasShopPath = location.pathname.includes('/shop');
+      setDarkBg(hasShopPath);
   
     };
 
     changeBg();
     console.log(darkBg);
 
-  }, [location]); //當 location 變化時重新運行
+  }, [location.pathname]); //當 location的pathname 變化時重新運行
 
   useEffect(()=>{
     const scrollStyle=()=>{
