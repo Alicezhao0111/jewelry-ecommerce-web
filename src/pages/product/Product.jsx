@@ -2,11 +2,15 @@ import React, { useEffect, useState } from "react";
 import "./product.scss";
 import { useParams } from "react-router-dom";
 import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/thumbs";
 import { Swiper, SwiperSlide } from "swiper/react";
+import {FreeMode, Thumbs} from 'swiper/modules';
 
 const Product = () => {
   const [products, setProducts] = useState([]);
   const [num, setNum] = useState(1);
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   const { productID } = useParams();
   console.log(productID);
@@ -63,22 +67,34 @@ const Product = () => {
             
           <Swiper className="productSlider" 
                     loop={true}
-                    spaceBetween={20}>
+                    spaceBetween={20}
+                    thumbs={{swiper: thumbsSwiper}}
+                    modules={[Thumbs]}>
+                    
           
             {displayImg}
          
+          </Swiper>
+          <Swiper onSwiper={setThumbsSwiper}
+          spaceBetween={10}
+          slidesPerView={4}
+          freeMode={true}
+          watchSlidesProgress={true}
+          modules={[FreeMode, Thumbs]}
+          className="otherSlider">
+
           </Swiper>
 
           
         
         <div className="right">
-          <div className="title box">
+          <div className="titleBox">
             <h1>{name}</h1>
-            <span></span>
+            <span>{displayPrice}</span>
           </div>
           <div className="compoBox">
             <h3>Composition</h3>
-            <span>{displayPrice}</span>
+            <span>quality</span>
           </div>
           <div className="optionBox">
             <h3>Option</h3>
@@ -97,16 +113,21 @@ const Product = () => {
             )}
           </div>
           <div className="quantity">
-            <button
+            <h3>Quantity</h3>
+            <div className="quantityBox">
+            <span
               onClick={() => setNum((prev) => (prev === 1 ? 1 : prev - 1))}
             >
               -
-            </button>
+            </span>
             {num}
-            <button onClick={() => setNum((prev) => prev + 1)}>+</button>
+            <span onClick={() => setNum((prev) => prev + 1)}>+</span>
+            </div>
           </div>
           <div className="cartBtn">
-            <button>ADD TO CART </button>
+            <button>
+                <span>ADD TO CART</span>
+            </button>
           </div>
         </div>
       </div>
