@@ -11,7 +11,7 @@
         "color":["Starry night","Desert sunset"],
         "option":["earring hooks", "ear clip"],
         "stock": 20,
-        "img": ["images/products/nebula1.jpg","images/products/nebula2.jpg","images/products/nebula3.jpg","images/products/nebula4.jpg","images/products/nebula5.jpg"],
+        "img": ["images/products/nebula1.jpg","images/products/nebula2.jpg","images/products/nebula3.jpg","images/products/nebula4.jpg"],
         "shipping": 1,
         "quantity": 0
     },
