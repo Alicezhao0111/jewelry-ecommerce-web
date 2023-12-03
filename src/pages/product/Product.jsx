@@ -4,8 +4,9 @@ import { useParams } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/thumbs";
+import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {FreeMode, Thumbs} from 'swiper/modules';
+import {FreeMode, Navigation, Thumbs} from 'swiper/modules';
 
 const Product = () => {
   const [products, setProducts] = useState([]);
@@ -29,6 +30,7 @@ const Product = () => {
       }
     }
     fetchData();
+
   }, [productID]);
 
   const {
@@ -36,6 +38,7 @@ const Product = () => {
     series,
     name,
     price,
+    composition,
     color,
     option,
     stock,
@@ -44,6 +47,12 @@ const Product = () => {
     quantity,
   } = products;
   const displayImg = img && img.length > 0 ? img.map((g, index) => (
+    <SwiperSlide key={index}>
+      <img src={g} alt="" />
+    </SwiperSlide>
+  )) : null;
+
+  const restImg = img && img.length > 1 ? img.slice(1).map((g, index) => (
     <SwiperSlide key={index}>
       <img src={g} alt="" />
     </SwiperSlide>
@@ -64,28 +73,32 @@ const Product = () => {
           </div>
           </div>
           <div className="bottom">
-            
+            <div className="sliderBox">
           <Swiper className="productSlider" 
                     loop={true}
                     spaceBetween={20}
+                    navigation={true}
                     thumbs={{swiper: thumbsSwiper}}
-                    modules={[Thumbs]}>
+                    modules={[FreeMode, Navigation, Thumbs]}>
                     
           
             {displayImg}
          
           </Swiper>
-          <Swiper onSwiper={setThumbsSwiper}
+          <Swiper className="otherSlider"
+          onSwiper={setThumbsSwiper}
           spaceBetween={10}
           slidesPerView={4}
           freeMode={true}
           watchSlidesProgress={true}
-          modules={[FreeMode, Thumbs]}
-          className="otherSlider">
+          modules={[FreeMode, Navigation, Thumbs]}
+          >
+
+{displayImg}
 
           </Swiper>
 
-          
+          </div>
         
         <div className="right">
           <div className="titleBox">
@@ -94,15 +107,18 @@ const Product = () => {
           </div>
           <div className="compoBox">
             <h3>Composition</h3>
-            <span>quality</span>
+            <span>{composition}</span>
           </div>
           <div className="optionBox">
-            <h3>Option</h3>
+            
             {color && colorOption.length > 0 && (
+                <>
+                <h3>Option</h3>
               <select name="color" id="color">
                 <option>color</option>
                 {colorOption}
               </select>
+              </>
             )}
 
             {option && styleOption.length > 0 && (

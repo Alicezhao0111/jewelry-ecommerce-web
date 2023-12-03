@@ -8,6 +8,7 @@
             "USD":19,
             "NTD":580
         },
+        "composition":"14k Gold Plated Hooks / Raw Brass / Japanese Beads / Wax Cord",
         "color":["Starry night","Desert sunset"],
         "option":["earring hooks", "ear clip"],
         "stock": 20,
@@ -23,6 +24,7 @@
             "USD":19,
             "NTD":580
         },
+        "composition":"14k Gold Plated Hooks / Raw Brass / Japanese Beads / Wax Cord",
         "color":["Starry night","Desert sunset"],
         "option":["earring hooks", "ear clip"],
         "stock": 20,
@@ -39,6 +41,7 @@
             "USD":22,
             "NTD":660
         },
+        "composition":"14k Gold Plated Hooks / 14k Gold Plated Brass / Czech Beads / Cotton Cord",
         "option":["earring hooks", "ear clip"],
         "stock": 20,
         "img": ["images/products/flowerE1.jpg","images/products/flowerE2.jpg","images/products/flowerE3.jpg","images/products/flowerE4.jpg","images/products/flowerE5.jpg"],
@@ -53,6 +56,7 @@
             "USD":19,
             "NTD":580
         },
+        "composition":"14k Gold Plated Hooks / Natural Shell / Cotton Cord",
         "option":["earring hooks", "ear clip"],
         "stock": 20,
         "img": ["images/products/shellE2.jpg","images/products/shellE1.jpg","images/products/shellE3.jpg"],
@@ -67,6 +71,7 @@
             "USD":22,
             "NTD":620
         },
+        "composition":"14k Gold Plated Hooks / Raw Brass / Cotton Cord",
         "option":["earring hooks", "ear clip"],
         "stock": 20,
         "img": ["images/products/mermaidE1.jpg","images/products/mermaidE2.jpg"],
@@ -82,6 +87,7 @@
             "USD":22,
             "NTD":660
         },
+        "composition":"14k Gold Plated Hooks / Raw Brass / Gemstone / Japanese Beads / Wax Cord",
         "option":["earring hooks", "ear clip"],
         "stock": 20,
         "img": ["images/products/sunE1.jpg","images/products/sunE2.jpg","images/products/sunE3.jpg","images/products/sunE4.jpg"],
@@ -97,6 +103,7 @@
             "USD":22,
             "NTD":620
         },
+        "composition":"Raw Brass / Japanese Beads / Wax Cord",
         "color":["Dark brown","Rosy pink"],
         "stock": 20,
         "img": ["images/products/sunB1.jpg","images/products/sunB2.jpg","images/products/sunB3.jpg","images/products/sunB4.jpg"],
@@ -112,6 +119,7 @@
             "USD":30,
             "NTD":880
         },
+        "composition":"Raw Brass / Czech Beads / Wax Cord",
         "color":["Dark brown","Rosy pink"],
         "stock": 20,
         "img": ["images/products/baliB1.jpg","images/products/baliB2.jpg","images/products/baliB3.jpg","images/products/baliB4.jpg"],
@@ -127,6 +135,7 @@
             "USD":23,
             "NTD":680
         },
+        "composition":"Raw Brass / Czech Beads / Wax Cord",
         "color":["Dark brown","Rosy pink","Camel brown"],
         "stock": 20,
         "img": ["images/products/brassflowerB1.jpeg","images/products/brassflowerB2.jpeg","images/products/brassflowerB3.jpeg"],
@@ -142,6 +151,7 @@
             "USD":22,
             "NTD":620
         },
+        "composition":"Raw Brass / Wax Cord",
         "color":["Dark brown","Rosy pink","Camel brown","Coral red"],
         "stock": 20,
         "img": ["images/products/brassB1.jpg","images/products/brassB2.jpg","images/products/brassB3.jpg","images/products/brassB4.jpg","images/products/brassB5.jpg","images/products/brassB6.jpg"],
@@ -157,6 +167,7 @@
             "USD":23,
             "NTD":680
         },
+        "composition":"Raw Brass / Garnet Gemstone / Wax Cord",
         "color":["Dark brown","Rosy pink","Camel brown"],
         "stock": 20,
         "img": ["images/products/garnetB1.jpg","images/products/garnetB2.jpg","images/products/garnetB3.jpg","images/products/garnetB4.jpg"],
@@ -171,6 +182,7 @@
             "USD":22,
             "NTD":620
         },
+        "composition":"Raw Brass / Japanese Beads / Wax Cord",
         "color":["Starry night","Desert sunset"],
         "stock": 20,
         "img": ["images/products/beadsB1.jpg","images/products/beadsB2.jpg","images/products/beadsB3.jpg"],
@@ -186,6 +198,7 @@
             "USD":23,
             "NTD":680
         },
+        "composition":"Raw Brass / Czech Beads / Japanese Beads / Wax Cord",
         "color":["Dark brown","Rosy pink","Camel brown"],
         "stock": 20,
         "img": ["images/products/flowersB1.jpg","images/products/flowersB2.jpg","images/products/flowersB3.jpg","images/products/flowersB4.jpg"],
@@ -201,6 +214,7 @@
             "USD":23,
             "NTD":680
         },
+        "composition":"Raw Brass / Czech Beads / Japanese Beads / Wax Cord",
         "color":["Dark brown","Rosy pink","Camel brown"],
         "stock": 20,
         "img": ["images/products/islandflowerB1.jpg","images/products/islandflowerB2.jpg","images/products/islandflowerB3.jpg","images/products/islandflowerB4.jpg"],
@@ -215,6 +229,7 @@
             "USD":23,
             "NTD":680
         },
+        "composition":"Raw Brass / 18k Gold Plated Star / Japanese Beads / Wax Cord",
         "color":["Dark brown","Rosy pink","Camel brown"],
         "stock": 20,
         "img": ["images/products/starB1.jpg","images/products/starB2.jpg"],
@@ -229,6 +244,7 @@
             "USD":23,
             "NTD":680
         },
+        "composition":"Raw Brass / Czech Beads / Japanese Beads / Wax Cord",
         "color":["Dark brown","Rosy pink","Camel brown"],
         "stock": 20,
         "img": ["images/products/squareB1.jpg","images/products/squareB2.jpg","images/products/squareB3.jpg","images/products/squareB4.jpg"],
@@ -244,6 +260,7 @@
             "USD":28,
             "NTD":820
         },
+        "composition":"Raw Brass / 18k Gold Plated Moon /Moonstone Gemstone/ Japanese Beads / Wax Cord",
         "color":["Dark brown","Rosy pink"],
         "stock": 20,
         "img": ["images/products/newmoonB1.jpg","images/products/newmoonB2.jpg","images/products/newmoonB3.jpg","images/products/newmoonB4.jpg","images/products/newmoonB5.jpg","images/products/newmoonB6.jpg","images/products/newmoonB7.jpg","images/products/newmoonB8.jpg","images/products/newmoonB9.jpg"],
@@ -259,6 +276,7 @@
             "USD":28,
             "NTD":820
         },
+        "composition":"Raw Brass /Moonstone Gemstone/ Aquamarine Gemstone / Wax Cord",
         "stock": 20,
         "img": ["images/products/springbayB1.png","images/products/springbayB2.jpg","images/products/springbayB3.jpg","images/products/springbayB4.jpg"],
         "shipping": 1,
@@ -272,6 +290,7 @@
             "USD":23,
             "NTD":680
         },
+        "composition":"Raw Brass / Czech Beads / Japanese Beads / Wax Cord",
         "color":["Dark brown","Rosy pink","Camel brown"],
         "stock": 20,
         "img": ["images/products/snowB1.jpg","images/products/snowB2.jpg"],
@@ -287,6 +306,7 @@
             "USD":32,
             "NTD":920
         },
+        "composition":"Raw Brass / Apatite Gemstone / Japanese Beads / Wax Cord",
         "stock": 20,
         "img": ["images/products/oceanN1.jpg","images/products/oceanN2.jpg","images/products/oceanN3.jpg","images/products/oceanN4.jpeg"],
         "shipping": 1,
@@ -301,6 +321,7 @@
             "USD":28,
             "NTD":820
         },
+        "composition":"Raw Brass / Garnet Gemstone / Coconut Beads / Shell Beads /Czech Beads / Wax Cord",
         "color":["Dark brown","Rosy pink","Camel brown"],
         "stock": 20,
         "img": ["images/products/garnetN1.jpg","images/products/garnetN2.jpg","images/products/garnetN3.jpg","images/products/garnetN4.jpg"],
@@ -315,6 +336,7 @@
             "USD":22,
             "NTD":660
         },
+        "composition":"Raw Brass / Japanese Beads / Wax Cord",
         "color":["Starry night","Desert sunset"],
         "stock": 20,
         "img": ["images/products/beadsN1.jpg","images/products/beadsN2.jpg","images/products/beadsN3.jpeg","images/products/beadsN4.jpeg"],
@@ -330,6 +352,7 @@
             "USD":27,
             "NTD":780
         },
+        "composition":"Raw Brass / Czech Beads / Wax Cord",
         "color":["Dark brown","Rosy pink","Camel brown"],
         "stock": 20,
         "img": ["images/products/brassflowerN1.jpg","images/products/brassflowerN2.jpeg"],
@@ -345,6 +368,7 @@
             "USD":25,
             "NTD":720
         },
+        "composition":"Raw Brass / Sunstone Gemstone / Japanese Beads / Wax Cord",
         "color":["Dark brown","Rosy pink","Camel brown","Coral red"],
         "stock": 20,
         "img": ["images/products/sunsetN1.jpg","images/products/sunsetN2.jpg","images/products/sunsetN3.jpg"],
@@ -360,6 +384,7 @@
             "USD":32,
             "NTD":920
         },
+        "composition":"Raw Brass / 18k Gold Plated Moon /Moonstone Gemstone/ Japanese Beads / Wax Cord",
         "color":["Dark brown","Rosy pink","Camel brown"],
         "stock": 20,
         "img": ["images/products/newmoonN1.jpg","images/products/newmoonN2.jpg","images/products/newmoonN3.jpg"],
@@ -375,6 +400,7 @@
             "USD":43,
             "NTD":1280
         },
+        "composition":"Raw Brass / Czech Beads / Wax Cord",
         "color":["Dark brown","Rosy pink"],
         "stock": 20,
         "img": ["images/products/baliN1.jpg","images/products/baliN2.jpg","images/products/baliN3.jpg","images/products/baliN4.jpg"],
@@ -390,6 +416,7 @@
             "USD":27,
             "NTD":780
         },
+        "composition":"Raw Brass / Wax Cord",
         "color":["Dark brown","Rosy pink","Camel brown","Coral red"],
         "stock": 20,
         "img": ["images/products/brassN1.jpg","images/products/brassN2.jpg","images/products/brassN3.jpg"],
@@ -405,6 +432,7 @@
             "USD":27,
             "NTD":780
         },
+        "composition":"Raw Brass / Czech Beads / Japanese Beads / Wax Cord",
         "color":["Dark brown","Rosy pink","Camel brown"],
         "stock": 20,
         "img": ["images/products/flowersN1.jpg","images/products/flowersN2.jpg","images/products/flowersN3.jpg"],
@@ -420,6 +448,7 @@
             "USD":30,
             "NTD":880
         },
+        "composition":"Raw Brass / Shell Moon / Japanese Beads / Wax Cord",
         "color":["Dark brown","Rosy pink","Camel brown"],
         "stock": 20,
         "img": ["images/products/whitemoonN1.jpg","images/products/whitemoonN2.jpg","images/products/whitemoonN3.jpg","images/products/whitemoonN4.jpg"],
@@ -434,6 +463,7 @@
             "USD":25,
             "NTD":720
         },
+        "composition":"Raw Brass / Czech Beads / Japanese Beads / Wax Cord",
         "color":["Dark brown","Rosy pink","Camel brown"],
         "stock": 20,
         "img": ["images/products/snowN1.jpg","images/products/snowN2.jpg","images/products/snowN3.jpg"],
@@ -449,6 +479,7 @@
             "USD":22,
             "NTD":620
         },
+        "composition":"Raw Brass / Wax Cord",
         "color":["Dark brown","Rosy pink","Camel brown","Coral red"],
         "stock": 20,
         "img": ["images/products/brassA1.jpg","images/products/brassA2.jpg","images/products/brassA3.jpg"],
@@ -463,6 +494,7 @@
             "USD":27,
             "NTD":780
         },
+        "composition":"Raw Brass / Czech Beads / Wax Cord",
         "color":["Dark brown","Rosy pink","Camel brown","Coral red"],
         "stock": 20,
         "img": ["images/products/roundflowerA1.jpg","images/products/roundflowerA2.jpg","images/products/roundflowerA3.jpg"],
@@ -477,6 +509,7 @@
             "USD":43,
             "NTD":1280
         },
+        "composition":"Cotton Cord / Cotton Drawstring Bag / Leather Label",
         "color":["Natural beige","Milk tea","Camel brown"],
         "stock": 20,
         "img": ["images/products/netbagG1.jpg","images/products/netbagG2.jpg","images/products/netbagG3.jpg"],
