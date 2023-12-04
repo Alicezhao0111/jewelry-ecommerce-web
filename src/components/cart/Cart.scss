@@ -1,0 +1,157 @@
+.cart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.38);
+    z-index: 2000;
+
+    .cartContainer {
+        background: #F3F0ED;
+        position: fixed;
+        top: 0;
+        right: 0;
+
+        z-index: 200000;
+
+        width: 35%;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        .textTop {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-top: 6vh;
+            width: 90%;
+
+            h3 {
+                color: var(--Dark-grey, #6F6152);
+                font-family: Belleza;
+                font-size: 2rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+
+            span {
+                color: var(--Dark-grey, #6F6152);
+                font-family: Gilda Display;
+                font-size: 0.8rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+
+        .itemList {
+
+            width: 90%;
+            margin-top: 5vh;
+
+            .infoBox {
+                width: 100%;
+                display: flex;
+                gap: 20px;
+
+
+
+                .imgBox {
+                    width: 9vw;
+                    height: 9vw;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
+                }
+
+                .detail {
+                    width: 70%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    h3 {
+                        color: var(--Dark-grey, #6F6152);
+                        font-family: Gilda Display;
+                        font-size: 1.1rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+
+                    h4 {
+                        color: var(--brown, #BDA18C);
+                        font-family: Belleza;
+                        font-size: 0.9rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+
+                    .quantity {
+                        .quantityBox {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+
+                            h5,
+                            span {
+                                color: var(--Dark-grey, #6F6152);
+                                font-family: Gilda Display;
+                                font-size: 1rem;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: normal;
+                            }
+
+                            .setQuantity {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+
+                }
+
+                .priceBox {
+                    span {
+                        color: var(--Dark-grey, #6F6152);
+                        font-family: Gilda Display;
+                        font-size: 0.9rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+
+                        white-space: nowrap;
+                    }
+                }
+
+            }
+
+
+
+            .underline {
+                width: 100%;
+
+                svg {
+                    width: 100%;
+                }
+            }
+        }
+        .textBottom{
+            display: flex;
+            flex-direction: column;
+            
+        }
+    }
+}

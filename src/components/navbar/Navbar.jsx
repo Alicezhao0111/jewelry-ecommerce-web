@@ -7,8 +7,10 @@ import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDown
 import KeyboardDoubleArrowDownOutlinedIcon from "@mui/icons-material/KeyboardDoubleArrowDownOutlined";
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.scss"
+import Cart from "../cart/Cart";
 
 const Navbar = () => {
+  const [open, setOpen] = useState (false);
   const [activeNav, setActiveNav] = useState(false);
   const [activeItem, setActiveItem] = useState("");
   const [darkBg, setDarkBg] = useState (false);
@@ -82,14 +84,15 @@ const Navbar = () => {
         <div className="right">
           <div className="icons">
             <SearchOutlinedIcon />
-            <div className="cartIcon">
-              <ShoppingCartOutlinedIcon />
+            <div className="cartIcon" onClick={()=>setOpen(!open)}>
+              <ShoppingCartOutlinedIcon/>
               <span>0</span>
             </div>
             <PersonOutlineOutlinedIcon />
           </div>
         </div>
       </div>
+      {open && <Cart /> }
     </div>
   );
 };
