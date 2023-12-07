@@ -13,11 +13,13 @@ import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import "./reset.scss"
 import Product from "./pages/product/product";
+import Cart from "./components/cart/Cart";
 
 const Layout = () => {
   const location = useLocation();
   useEffect(()=>{
     window.scrollTo(0,0);
+    console.log(location);
   },[location])
   return (
     <div className="app">
@@ -26,6 +28,7 @@ const Layout = () => {
         <Route path="/" element={<Home />} />
         <Route path="/shop/:productID" element={<Product/>}/>
         <Route path="/shop" element={<Shop />} />
+        <Route path="/cart" element={<Cart/>} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/faq" element={<Faq />} />
@@ -46,6 +49,8 @@ function App() {
         <LocomotiveScrollProvider
           options={{
             smooth: true,
+            initPosition: { x: 0, y: 0 },
+            offset: [0, 0]
             // ... all available Locomotive Scroll instance options
           }}
           watch={

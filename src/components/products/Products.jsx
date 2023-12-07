@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Products.scss";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import Pagination from "../pagination/pagination";
 
 const Products = () => {
@@ -169,7 +169,7 @@ const Products = () => {
             
           </div>
           <div className="pageBox">
-          <Pagination totalPosts={displayProducts.length} postsPerPage={postsPerPage} setCurrentPage={setCurrentPage} currentPage={currentPage} />
+          <Pagination totalPosts={displayProducts.length} postsPerPage={postsPerPage} setCurrentPage={setCurrentPage} currentPage={currentPage}/>
           </div>
         </div>
       </div>
