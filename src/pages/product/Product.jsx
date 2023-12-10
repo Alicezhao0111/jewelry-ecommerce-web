@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {FreeMode, Navigation, Thumbs} from 'swiper/modules';
 
-const Product = () => {
+const Product = ({addToCart}) => {
   const [products, setProducts] = useState([]);
   const [num, setNum] = useState(1);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -61,6 +61,20 @@ const Product = () => {
   const displayPrice = price ? `NT$${price.NTD} / USD$${price.USD}`: "Loading...";
   const colorOption = color ? color.map((c, index) => ( <option key={index} value={c}> {c} </option>)): null;
   const styleOption = option ? option.map((o, index) => (<option key={index} value={o}>{o} </option>)): null;
+
+  function handleAddToCart(){
+    const selectedItem = {
+      id: products.id,
+      name: products.name,
+      img:products.img[0],
+      color: products.color,
+      option: products.option,
+      quantity: num,
+
+    };
+    addToCart(selectedItem);
+    console.log("被選擇",selectedItem)
+  }
 
   return (
     <div className="product">
@@ -141,7 +155,7 @@ const Product = () => {
             </div>
           </div>
           <div className="cartBtn">
-            <button>
+            <button onClick={handleAddToCart}>
                 <span>ADD TO CART</span>
             </button>
           </div>

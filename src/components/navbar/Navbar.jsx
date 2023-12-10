@@ -9,8 +9,8 @@ import { Link, useLocation } from "react-router-dom";
 import "./Navbar.scss"
 import Cart from "../cart/Cart";
 
-const Navbar = () => {
-  const [open, setOpen] = useState (false);
+const Navbar = ({setCartOpen}) => {
+  
   const [activeNav, setActiveNav] = useState(false);
   const [activeItem, setActiveItem] = useState("");
   const [darkBg, setDarkBg] = useState (false);
@@ -84,7 +84,7 @@ const Navbar = () => {
         <div className="right">
           <div className="icons">
             <SearchOutlinedIcon />
-            <div className="cartIcon" onClick={()=>setOpen(!open)}>
+            <div className="cartIcon" onClick={() => setCartOpen(true)}>
               <ShoppingCartOutlinedIcon/>
               <span>0</span>
             </div>
@@ -92,7 +92,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      {open && <Cart /> }
+      
     </div>
   );
 };

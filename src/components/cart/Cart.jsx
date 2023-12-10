@@ -1,49 +1,20 @@
 import React, { useState } from "react";
 import "./Cart.scss";
 
-function Cart() {
+function Cart({setCartOpen, selectedItem}) {
   const [num, setNum] = useState(1);
-  const data = [
-    {
-      id: "1",
-      category: "earrings",
-      name: "nebula earrings",
-      price: "NTD: 580",
 
-      composition:
-        "14k Gold Plated Hooks / Raw Brass / Japanese Beads / Wax Cord",
-      color: "Starry night",
-      option: "earring hooks",
-      stock: 20,
-      img: "images/products/nebula1.jpg",
-      shipping: 1,
-      quantity: 0,
-    },
-    {
-      id: "2",
-      category: "earrings",
-      name: "mars earrings",
-      price: "NTD: 580",
+  console.log("傳遞的",selectedItem);
 
-      composition:
-        "14k Gold Plated Hooks / Raw Brass / Japanese Beads / Wax Cord",
-      color: "Starry night",
-      option: "earring hooks",
-      stock: 20,
-      img: "images/products/mars1.jpg",
-      shipping: 1,
-      quantity: 0,
-    },
-  ];
 
   return (
     <div className="cart">
       <div className="cartContainer">
         <div className="textTop">
           <h3>Shopping Cart</h3>
-          <span>CLOSE</span>
+          <span onClick={() => setCartOpen(false)}>CLOSE</span>
         </div>
-        {data?.map((item) => (
+        {selectedItem.map((item) => (
           <div className="itemList" key={item.id}>
             <div className="infoBox">
               <div className="imgBox">
@@ -67,7 +38,8 @@ function Cart() {
                     <span>{num}</span>
                     <span
                       className="setQuantity"
-                      onClick={() => setNum((prev) => prev + 1)}
+                      onClick={() => setNum((prev) => prev + 1)
+                    }
                     >
                       +
                     </span>

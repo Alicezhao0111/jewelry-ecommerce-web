@@ -8,6 +8,7 @@
     background: rgba(0, 0, 0, 0.38);
     z-index: 2000;
 
+
     .cartContainer {
         background: #F3F0ED;
         position: fixed;
@@ -48,6 +49,8 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: normal;
+
+                cursor: pointer;
             }
         }
 
