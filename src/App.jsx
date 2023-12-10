@@ -20,8 +20,10 @@ const Layout = () => {
   const [cartOpen, setCartOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState([]);
 
+
   const addToCart = (product) => {
     setSelectedItem((prev) => [...prev, product]);
+    console.log("選我", product);
   };
 
   useEffect(()=>{
@@ -32,7 +34,7 @@ const Layout = () => {
   return (
     <div className="app">
       <Navbar setCartOpen={setCartOpen}/>
-      {cartOpen && <Cart setCartOpen={setCartOpen} selectedItem={selectedItem}/>}
+      {cartOpen && <Cart setCartOpen={setCartOpen} selectedItem={selectedItem} />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shop/:productID" element={<Product addToCart={addToCart} />} />

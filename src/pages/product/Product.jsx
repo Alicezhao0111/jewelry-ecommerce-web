@@ -12,6 +12,9 @@ const Product = ({addToCart}) => {
   const [products, setProducts] = useState([]);
   const [num, setNum] = useState(1);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [selectedColor, setSelectedColor] = useState(null);
+  const [selectedOption, setSelectedOption] = useState(null);
+
 
   const { productID } = useParams();
   console.log(productID);
@@ -59,8 +62,8 @@ const Product = ({addToCart}) => {
   )) : null;
 
   const displayPrice = price ? `NT$${price.NTD} / USD$${price.USD}`: "Loading...";
-  const colorOption = color ? color.map((c, index) => ( <option key={index} value={c}> {c} </option>)): null;
-  const styleOption = option ? option.map((o, index) => (<option key={index} value={o}>{o} </option>)): null;
+  const colorOption = color ? color.map((c, index) => ( <option key={index} value={c} > {c} </option>)): null;
+  const styleOption = option ? option.map((o, index) => (<option key={index} value={o}  >{o} </option>)): null;
 
   function handleAddToCart(){
     const selectedItem = {
@@ -70,6 +73,8 @@ const Product = ({addToCart}) => {
       color: products.color,
       option: products.option,
       quantity: num,
+      selectedColor,
+      selectedOption,
 
     };
     addToCart(selectedItem);
@@ -108,7 +113,7 @@ const Product = ({addToCart}) => {
           modules={[FreeMode, Navigation, Thumbs]}
           >
 
-{displayImg}
+          {displayImg}
 
           </Swiper>
 
@@ -128,7 +133,7 @@ const Product = ({addToCart}) => {
             {color && colorOption.length > 0 && (
                 <>
                 <h3>Option</h3>
-              <select name="color" id="color">
+              <select name="color" id="color" onChange={(e)=>setSelectedColor(e.target.value)}>
                 <option>color</option>
                 {colorOption}
               </select>
@@ -136,7 +141,7 @@ const Product = ({addToCart}) => {
             )}
 
             {option && styleOption.length > 0 && (
-              <select name="style" id="style">
+              <select name="style" id="style" onChange={(e) => setSelectedOption(e.target.value)}>
                 <option>style</option>
                 {styleOption}
               </select>

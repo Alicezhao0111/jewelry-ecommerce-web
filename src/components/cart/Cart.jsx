@@ -22,8 +22,8 @@ function Cart({setCartOpen, selectedItem}) {
               </div>
               <div className="detail">
                 <h3>{item.name}</h3>
-                <h4>{item.color}</h4>
-                <h4>{item.option}</h4>
+                <h4>{item.selectedColor}</h4>
+                <h4>{item.selectedOption}</h4>
                 <div className="quantity">
                   <div className="quantityBox">
                     <h5>Qty :</h5>
