@@ -40,8 +40,6 @@ const Navbar = ({setCartOpen}) => {
       }else{
         setActiveNav(false);
       }
-      console.log(activeNav);
-      console.log(window.scrollY);
     }
     window.addEventListener('scroll',scrollStyle);
 

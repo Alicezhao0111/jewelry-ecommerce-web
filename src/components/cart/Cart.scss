@@ -17,7 +17,7 @@
 
         z-index: 200000;
 
-        width: 35%;
+        width: 40%;
         height: 100vh;
 
         display: flex;
@@ -118,8 +118,11 @@
                                 line-height: normal;
                             }
 
-                            .setQuantity {
+                            button{
                                 cursor: pointer;
+                                border: none;
+                                color: var(--Dark-grey, #6F6152);
+                                font-size: 0.9rem;
                             }
                         }
                     }

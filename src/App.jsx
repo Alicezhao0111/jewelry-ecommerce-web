@@ -34,7 +34,7 @@ const Layout = () => {
   return (
     <div className="app">
       <Navbar setCartOpen={setCartOpen}/>
-      {cartOpen && <Cart setCartOpen={setCartOpen} selectedItem={selectedItem} />}
+      {cartOpen && <Cart setCartOpen={setCartOpen} selectedItem={selectedItem} setSelectedItem={setSelectedItem}/>}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shop/:productID" element={<Product addToCart={addToCart} />} />

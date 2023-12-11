@@ -12,8 +12,9 @@ const Product = ({addToCart}) => {
   const [products, setProducts] = useState([]);
   const [num, setNum] = useState(1);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-  const [selectedColor, setSelectedColor] = useState(null);
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedColor, setSelectedColor] = useState("");
+  const [selectedOption, setSelectedOption] = useState("");
+
 
 
   const { productID } = useParams();
@@ -49,6 +50,7 @@ const Product = ({addToCart}) => {
     shipping,
     quantity,
   } = products;
+
   const displayImg = img && img.length > 0 ? img.map((g, index) => (
     <SwiperSlide key={index}>
       <img src={g} alt="" />
@@ -66,16 +68,18 @@ const Product = ({addToCart}) => {
   const styleOption = option ? option.map((o, index) => (<option key={index} value={o}  >{o} </option>)): null;
 
   function handleAddToCart(){
+    if (colorOption&&!selectedColor || styleOption&&!selectedOption) {
+      alert("Please select color and style before adding to cart.");
+      return;
+    }
     const selectedItem = {
       id: products.id,
       name: products.name,
       img:products.img[0],
-      color: products.color,
-      option: products.option,
-      quantity: num,
+      price:products.price.NTD,
+      selectedQuantity: num,
       selectedColor,
-      selectedOption,
-
+      selectedOption,      
     };
     addToCart(selectedItem);
     console.log("被選擇",selectedItem)
@@ -132,19 +136,22 @@ const Product = ({addToCart}) => {
             
             {color && colorOption.length > 0 && (
                 <>
-                <h3>Option</h3>
+                <h3>Color Option</h3>
               <select name="color" id="color" onChange={(e)=>setSelectedColor(e.target.value)}>
-                <option>color</option>
+                <option disabled selected value="">color</option>
                 {colorOption}
               </select>
               </>
             )}
 
             {option && styleOption.length > 0 && (
+              <>
+              <h3>Style Option</h3>
               <select name="style" id="style" onChange={(e) => setSelectedOption(e.target.value)}>
-                <option>style</option>
+                <option disabled selected value="">style</option>
                 {styleOption}
               </select>
+              </>
             )}
           </div>
           <div className="quantity">
