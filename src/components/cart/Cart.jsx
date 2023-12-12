@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./Cart.scss";
+import CloseIcon from '@mui/icons-material/Close';
 
 function Cart({setCartOpen, selectedItem, setSelectedItem}) {
     const [sum, setSum] = useState(0);
 
   const updateCart = (item, value) =>{
     const newCart = selectedItem.map((cartItem)=>{
-        if (cartItem.id===item.id){
+        if (cartItem.id===item.id &&
+            cartItem.selectedColor === item.selectedColor&&
+            cartItem.selectedOption === item.selectedOption){
             return {
                 ...cartItem,
                 selectedQuantity: parseInt(value),
@@ -19,6 +22,13 @@ function Cart({setCartOpen, selectedItem, setSelectedItem}) {
     setSelectedItem(newCart);
     console.log("更新數量的購物車 ", newCart);
   };
+
+
+  const handleDeleteItem = (itemUniqueId)=>{
+    const newCart = selectedItem.filter((item)=>item.uniqueId !== itemUniqueId)
+    setSelectedItem(newCart);
+    console.log("unique", itemUniqueId)
+  }
 
   useEffect(()=>{
     const total=selectedItem.reduce((prev,next)=>{
@@ -36,8 +46,9 @@ function Cart({setCartOpen, selectedItem, setSelectedItem}) {
           <h3>Shopping Cart</h3>
           <span onClick={() => setCartOpen(false)}>CLOSE</span>
         </div>
+        <div className="itemListBox">
         {selectedItem?.map((item) => (
-          <div className="itemList" key={item.id}>
+          <div className="itemList" key={item.uniqueId}>
             <div className="infoBox">
               <div className="imgBox">
                 <img src={item.img} alt="" />
@@ -69,20 +80,21 @@ function Cart({setCartOpen, selectedItem, setSelectedItem}) {
               
               <div className="priceBox">
                 <span>NT${item.price*item.selectedQuantity}</span>
+                <CloseIcon onClick={()=>handleDeleteItem(item.uniqueId)}/>
               </div>
             </div>
             <div className="underline">
               <svg
-                width="448"
+                width="1000"
                 height="1"
-                viewBox="0 0 448 1"
+                viewBox="0 0 1000 1"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <line
                   x1="4.37114e-08"
                   y1="0.5"
-                  x2="448"
+                  x2="1000"
                   y2="0.500039"
                   stroke="#D1C9C0"
                 />
@@ -90,6 +102,7 @@ function Cart({setCartOpen, selectedItem, setSelectedItem}) {
             </div>
           </div>
         ))}
+        </div>
                 <div className="textBottom">
           <div className="noticeBox">
             <span>{sum<1500?`Another NT$${1500-sum} to benefit from free delivery costs`:"Nice! You Get Free Delivery!"}</span>

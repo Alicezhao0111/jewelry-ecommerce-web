@@ -81,6 +81,8 @@ const Product = ({addToCart}) => {
       selectedColor,
       selectedOption,      
     };
+
+    
     addToCart(selectedItem);
     console.log("被選擇",selectedItem)
   }
@@ -137,8 +139,8 @@ const Product = ({addToCart}) => {
             {color && colorOption.length > 0 && (
                 <>
                 <h3>Color Option</h3>
-              <select name="color" id="color" onChange={(e)=>setSelectedColor(e.target.value)}>
-                <option disabled selected value="">color</option>
+              <select name="color" id="color" value={selectedColor} onChange={(e)=>setSelectedColor(e.target.value)}>
+                <option disabled value="">color</option>
                 {colorOption}
               </select>
               </>
@@ -147,8 +149,8 @@ const Product = ({addToCart}) => {
             {option && styleOption.length > 0 && (
               <>
               <h3>Style Option</h3>
-              <select name="style" id="style" onChange={(e) => setSelectedOption(e.target.value)}>
-                <option disabled selected value="">style</option>
+              <select name="style" id="style" value={selectedOption} onChange={(e) => setSelectedOption(e.target.value)}>
+                <option disabled value="">style</option>
                 {styleOption}
               </select>
               </>

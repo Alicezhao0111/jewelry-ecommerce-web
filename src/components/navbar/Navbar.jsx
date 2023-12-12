@@ -9,11 +9,13 @@ import { Link, useLocation } from "react-router-dom";
 import "./Navbar.scss"
 import Cart from "../cart/Cart";
 
-const Navbar = ({setCartOpen}) => {
+const Navbar = ({setCartOpen, selectedItem}) => {
   
   const [activeNav, setActiveNav] = useState(false);
   const [activeItem, setActiveItem] = useState("");
   const [darkBg, setDarkBg] = useState (false);
+  const [cartQuantity, setCartQuantity] = useState("0");
+  
   const location = useLocation();
 
   //item動畫底線&特殊情況nav樣式設定
@@ -48,6 +50,12 @@ const Navbar = ({setCartOpen}) => {
     };
 
   },[])
+
+ //購物車顯示數量
+  useEffect(()=>{
+    const totalQuantity = selectedItem.reduce((prev,next)=>prev + next.selectedQuantity,0);
+    setCartQuantity(totalQuantity);
+  },[selectedItem])
   
   
   
@@ -84,7 +92,7 @@ const Navbar = ({setCartOpen}) => {
             <SearchOutlinedIcon />
             <div className="cartIcon" onClick={() => setCartOpen(true)}>
               <ShoppingCartOutlinedIcon/>
-              <span>0</span>
+              <span>{cartQuantity}</span>
             </div>
             <PersonOutlineOutlinedIcon />
           </div>
