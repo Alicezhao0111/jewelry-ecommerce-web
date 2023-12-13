@@ -51,6 +51,23 @@
                 line-height: normal;
 
                 cursor: pointer;
+                position: relative;
+            }
+
+            span::after{
+                position: absolute;
+                content: '';
+                bottom: -2.5px;
+                left: 0;
+                width: 0;
+                height: 1px;
+                background: #BDA18C;
+                transition: width 0.3s ease;
+
+            }
+
+            span:hover::after, span:active::after{
+                width: 100%;
             }
         }
 
@@ -59,6 +76,18 @@
             overflow-y: auto;
             width: 88%;
             margin-top: 3vh;
+
+            .emptyCart{
+                height: 30vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                p{
+                    color: #6F6152;
+                }
+                
+            }
 
             .itemList {
                 margin-top: 2vh;
@@ -173,6 +202,7 @@
         .textBottom {
             display: flex;
             flex-direction: column;
+            margin-top: auto;
 
             width: 100%;
 
@@ -225,7 +255,7 @@
                 display: flex;
                 justify-content: center;
                 margin-top: 30px;
-                margin-bottom: 20px;
+                margin-bottom: 5vh;
 
                 button {
                     border: none;

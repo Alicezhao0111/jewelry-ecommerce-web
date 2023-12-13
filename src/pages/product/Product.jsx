@@ -69,7 +69,7 @@ const Product = ({addToCart}) => {
 
   function handleAddToCart(){
     if (colorOption&&!selectedColor || styleOption&&!selectedOption) {
-      alert("Please select color and style before adding to cart.");
+      alert("Please select color and style.");
       return;
     }
     const selectedItem = {

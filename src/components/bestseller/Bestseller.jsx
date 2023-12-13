@@ -11,41 +11,16 @@ import sunBracelet from "../../assets/sunBracelet.jpg"
 
 // Import Swiper styles
 import "swiper/css";
+import { Link } from "react-router-dom";
 
-const data =[
-    {
-        id: 1,
-        name: "New moon necklace",
-        img:newMoonNecklace
-    },
-    {
-        id: 2,
-        name: "Ocean necklace",
-        img:oceanNecklace
-    },
-    {
-        id: 3,
-        name: "Sun bracelet",
-        img:sunBracelet
-    },
-    {
-        id: 4,
-        name: "Flower necklace",
-        img:flowerNecklace
-    },
-    {
-        id: 5,
-        name: "Brass bracelet",
-        img:brassBracelet
-    },
-    {
-        id: 6,
-        name: "Moonlight necklace",
-        img:moonNecklace
-    }
-];
+const Bestseller = ({products}) => {
 
-const Bestseller = () => {
+  const selectedBestId = [25,20,7,26,10,11];
+  const selectedBestSeller = products.filter((item)=>selectedBestId.includes(parseInt(item.id)));
+  
+  console.log("產品", selectedBestSeller);
+
+  
   return (
     <div className="bestseller">
       <div className="container">
@@ -77,11 +52,12 @@ const Bestseller = () => {
             
           <Swiper spaceBetween={35} slidesPerView={3.3}>
             
-                {data.map((data)=>{
+                {selectedBestSeller.map((data)=>{
                     return (
                         <SwiperSlide key={data.id} >
                             <a href="#" className="list-group-item">
-                                <img src={data.img} alt="bestseller" className="img-item"/>
+                              
+                                <img src={data.img[0]} alt="bestseller" className="img-item"/>
                                 <span>{data.name}</span>
                             </a>
                         </SwiperSlide>
