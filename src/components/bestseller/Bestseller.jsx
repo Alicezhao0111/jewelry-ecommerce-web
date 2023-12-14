@@ -2,14 +2,6 @@ import React from "react";
 import "./Bestseller.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-import moonNecklace from "../../assets/moonNecklace.jpg"
-import brassBracelet from "../../assets/brassBracelet.jpg"
-import oceanNecklace from "../../assets/oceanNecklace.jpg"
-import flowerNecklace from "../../assets/flowerNecklace.jpg"
-import newMoonNecklace from "../../assets/newMoonNecklace.jpg"
-import sunBracelet from "../../assets/sunBracelet.jpg"
-
-// Import Swiper styles
 import "swiper/css";
 import { Link } from "react-router-dom";
 
@@ -17,9 +9,6 @@ const Bestseller = ({products}) => {
 
   const selectedBestId = [25,20,7,26,10,11];
   const selectedBestSeller = products.filter((item)=>selectedBestId.includes(parseInt(item.id)));
-  
-  console.log("產品", selectedBestSeller);
-
   
   return (
     <div className="bestseller">
@@ -55,11 +44,13 @@ const Bestseller = ({products}) => {
                 {selectedBestSeller.map((data)=>{
                     return (
                         <SwiperSlide key={data.id} >
-                            <a href="#" className="list-group-item">
+                          <Link to={`/shop/${data.id}`} className="list-group-item">
+                            
                               
                                 <img src={data.img[0]} alt="bestseller" className="img-item"/>
                                 <span>{data.name}</span>
-                            </a>
+                            
+                            </Link>
                         </SwiperSlide>
                     )
                 })}

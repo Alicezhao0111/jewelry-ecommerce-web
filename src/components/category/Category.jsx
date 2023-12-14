@@ -50,7 +50,7 @@ const Category = () => {
               return (
                 <SwiperSlide key={data.id} >
                   <a href="#" className="list-group-item">
-                    <img src={data.img} alt="bestseller" className="img-item" />
+                    <img src={data.img} alt="category" className="img-item" />
                     <div className="box">
                       <span>{data.name}</span>
                     </div>

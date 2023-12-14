@@ -14,6 +14,7 @@ import Footer from "./components/footer/Footer";
 import "./reset.scss"
 import Product from "./pages/product/product";
 import Cart from "./components/cart/Cart";
+import Products from "./components/products/Products";
 
 const Layout = () => {
   const location = useLocation();

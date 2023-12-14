@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Products.scss";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import Pagination from "../pagination/pagination";
+
 
 const Products = () => {
   const [products, setProducts] =useState([]);
@@ -11,6 +12,7 @@ const Products = () => {
   const [currency, setCurrency] = useState("");
   const [displayProducts, setDisplayProducts] = useState(products);
   const [sortType, setSortType]=useState("");
+  const navigate = useNavigate();
   
   
 
@@ -65,6 +67,9 @@ const Products = () => {
       return category === "all" ? true : product.category === category || (product.series && product.series.includes(category));
     });
     setDisplayProducts(sortProducts(sortType, filtered));
+
+    navigate(`/shop/${category.toLowerCase()}`);
+
   };
 
   //轉換貨幣
