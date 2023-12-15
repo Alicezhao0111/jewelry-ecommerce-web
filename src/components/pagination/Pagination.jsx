@@ -34,6 +34,7 @@ const Pagination = ({ totalPosts, postsPerPage, setCurrentPage,currentPage}) => 
             className={page==currentPage?"pageBtnActive":"pageBtn"}
             onClick={() => {
               setCurrentPage(page);
+              window.scrollTo(0,0);
               
             }}
           >

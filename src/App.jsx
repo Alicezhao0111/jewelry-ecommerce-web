@@ -15,6 +15,7 @@ import "./reset.scss"
 import Product from "./pages/product/product";
 import Cart from "./components/cart/Cart";
 import Products from "./components/products/Products";
+import ShopCategory from "./components/shopCategory/ShopCategory";
 
 const Layout = () => {
   const location = useLocation();
@@ -65,6 +66,7 @@ const Layout = () => {
       {cartOpen && <Cart setCartOpen={setCartOpen} selectedItem={selectedItem} setSelectedItem={setSelectedItem}/>}
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/shop/:categoryName" element={<ShopCategory/>}/> 
         <Route path="/shop/:productID" element={<Product addToCart={addToCart} selectedItem={selectedItem} setSelectedItem={setSelectedItem}/>} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/cart" element={<Cart/>} />
