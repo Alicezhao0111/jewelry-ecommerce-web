@@ -7,6 +7,7 @@ import bracelet from "../../assets/bracelet.png";
 import earrings from "../../assets/earrings.png";
 import anklet from "../../assets/anklet.png";
 import crochetBag from "../../assets/crochetBag.png";
+import { Link } from "react-router-dom";
 
 const data = [
   {
@@ -21,7 +22,7 @@ const data = [
   },
   {
     id: 3,
-    name: "earrrings",
+    name: "earrings",
     img: earrings,
   },
   {
@@ -49,12 +50,14 @@ const Category = () => {
             {data.map((data) => {
               return (
                 <SwiperSlide key={data.id} >
+                  <Link to={`/shop/${data.name}`}>
                   <a href="#" className="list-group-item">
                     <img src={data.img} alt="category" className="img-item" />
                     <div className="box">
                       <span>{data.name}</span>
                     </div>
                   </a>
+                  </Link>
                 </SwiperSlide>
               );
             })}

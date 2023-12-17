@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const ShopCategory = ({
   products,
@@ -8,10 +8,14 @@ const ShopCategory = ({
   sortType,
   sortProducts,
 }) => {
-    const {categoryName} = useParams();
+
+    const navigate = useNavigate();
+    const { categoryName } = useParams();
     console.log("分類",categoryName);
+
   //分類商品加排序
   const categoryChange = (e, category) => {
+    
     e.preventDefault();
     setTypeChange(category);
 
@@ -19,10 +23,16 @@ const ShopCategory = ({
       return category === "all"
         ? true
         : product.category === category ||
-            (product.series && product.series.includes(category));
+          (product.series && product.series.includes(category));
     });
+
     setDisplayProducts(sortProducts(sortType, filtered));
+
+    // 使用 navigate 函數改變路徑
+    navigate(`/shop/${category}`);
   };
+
+  // 現在filter功能無法跨頁正常使用12/17
 
   return (
     <div className="category">
@@ -36,10 +46,9 @@ const ShopCategory = ({
           </li>
           
           <li>
-            <Link to="/shop/earings" onClick={(e) => categoryChange(e, "earrings")}>
+            <a href="" onClick={(e) => categoryChange(e, "earrings")}>
               earrings
-            </Link>
-            {/* pathg尚未改變，且category ID為undefined，在檢查route 12/15 */}
+            </a>
           </li>
           
           <li>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import "./Products.scss";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import Pagination from "../pagination/pagination";
@@ -10,22 +11,35 @@ const Products = () => {
   const [postsPerPage, setPostsPerPage] = useState(12);
   const [typeChange, setTypeChange] = useState("all");
   const [currency, setCurrency] = useState("");
-  const [displayProducts, setDisplayProducts] = useState(products);
+  const [displayProducts, setDisplayProducts] = useState([]);
   const [sortType, setSortType] = useState("");
+  const { categoryName } = useParams();
+
 
   useEffect(() => {
     async function fetchData() {
       try {
         const response = await fetch("products.json");
         const data = await response.json();
-        setProducts(data);
-        setDisplayProducts(data);
+
+        // 判斷是否有指定分類，如果為"all"或是"undefined"(一開始進入的頁面)就顯示所有產品
+        const filteredProducts = categoryName === "all" || categoryName === undefined
+          ? data
+          : data.filter(
+              (product) =>
+                product.category === categoryName ||
+                (product.series && product.series.includes(categoryName))
+            );
+
+        setProducts(filteredProducts);
+        setDisplayProducts(filteredProducts);
       } catch (err) {
         console.log("fetch data error", err);
       }
     }
+
     fetchData();
-  }, []);
+  }, [categoryName]);
 
   //設定頁面
   const lastPostIndex = postsPerPage * currentPage;
@@ -88,7 +102,7 @@ const Products = () => {
           <div className="productList">
             {currentPosts.map((product) => (
               <div key={product.id} className="wholeBox">
-                <Link to={`/shop/${product.id}`}>
+                <Link to={`/product/${product.id}`}>
                   <div className="box">
                     <img className="showImg" src={product.img[0]} alt="" />
                     <img className="hoverImg" src={product.img[1]} alt="" />

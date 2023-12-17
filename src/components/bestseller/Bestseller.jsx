@@ -44,7 +44,7 @@ const Bestseller = ({products}) => {
                 {selectedBestSeller.map((data)=>{
                     return (
                         <SwiperSlide key={data.id} >
-                          <Link to={`/shop/${data.id}`} className="list-group-item">
+                          <Link to={`/product/${data.id}`} className="list-group-item">
                             
                               
                                 <img src={data.img[0]} alt="bestseller" className="img-item"/>
