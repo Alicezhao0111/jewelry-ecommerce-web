@@ -50,13 +50,11 @@ const Category = () => {
             {data.map((data) => {
               return (
                 <SwiperSlide key={data.id} >
-                  <Link to={`/shop/${data.name}`}>
-                  <a href="#" className="list-group-item">
+                  <Link to={`/shop/${data.name}`} className="list-group-item">
                     <img src={data.img} alt="category" className="img-item" />
                     <div className="box">
                       <span>{data.name}</span>
                     </div>
-                  </a>
                   </Link>
                 </SwiperSlide>
               );

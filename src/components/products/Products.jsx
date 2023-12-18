@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import "./Products.scss";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import Pagination from "../pagination/pagination";
-import ShopCategory from "../shopCategory/ShopCategory";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -14,6 +13,7 @@ const Products = () => {
   const [displayProducts, setDisplayProducts] = useState([]);
   const [sortType, setSortType] = useState("");
   const { categoryName } = useParams();
+  const navigate = useNavigate();
 
 
   useEffect(() => {
@@ -21,30 +21,40 @@ const Products = () => {
       try {
         const response = await fetch("products.json");
         const data = await response.json();
-
-        // 判斷是否有指定分類，如果為"all"或是"undefined"(一開始進入的頁面)就顯示所有產品
-        const filteredProducts = categoryName === "all" || categoryName === undefined
-          ? data
-          : data.filter(
-              (product) =>
-                product.category === categoryName ||
-                (product.series && product.series.includes(categoryName))
-            );
-
-        setProducts(filteredProducts);
-        setDisplayProducts(filteredProducts);
+        setProducts(data);
+        setTypeChange(categoryName || "all");
       } catch (err) {
         console.log("fetch data error", err);
       }
     }
-
+    
     fetchData();
+    console.log("typeChange",typeChange)
   }, [categoryName]);
 
-  //設定頁面
-  const lastPostIndex = postsPerPage * currentPage;
-  const firstPostIndex = lastPostIndex - postsPerPage;
-  const currentPosts = displayProducts.slice(firstPostIndex, lastPostIndex);
+  //當分類、排序、產品任一數組發生改變時，重新設置展示的產品
+  
+  useEffect(() => {
+    const filtered = products.filter((product) => {
+      return typeChange === "all"
+        ? true
+        : product.category === typeChange ||
+          (product.series && product.series.includes(typeChange));
+    });
+  
+    // 只在 sortType 有值時進行排序
+    const sortedProducts = sortType ? sortProducts(sortType, filtered) : filtered;
+    setDisplayProducts(sortedProducts);
+  }, [typeChange, products, sortType]);
+
+  //改變分類
+  
+  const categoryChange = (e, category) => {
+    e.preventDefault();
+    setTypeChange(category);
+    setCurrentPage(1);
+    navigate(`/shop/${category}`);
+  };
 
   //排序商品
 
@@ -58,11 +68,9 @@ const Products = () => {
   };
 
   const handleSortChange = (event) => {
-    const newSortType = event.target.value;
-    setSortType(newSortType);
-    console.log(sortType);
-    setDisplayProducts(sortProducts(newSortType, displayProducts));
+    setSortType(event.target.value);
   };
+
 
   //轉換貨幣
 
@@ -71,16 +79,88 @@ const Products = () => {
     console.log(event.target.value);
   };
 
+  //設定頁面
+  const lastPostIndex = postsPerPage * currentPage;
+  const firstPostIndex = lastPostIndex - postsPerPage;
+  const currentPosts = displayProducts.slice(firstPostIndex, lastPostIndex);
+
+  //12/18 Finish Notion Note
+
+
   return (
     <div className="products">
       <div className="container">
-        <ShopCategory
-          products={products}
-          setTypeChange={setTypeChange}
-          setDisplayProducts={setDisplayProducts}
-          sortType={sortType}
-          sortProducts={sortProducts}
-        />
+      <div className="category">
+      <ul className="title">
+        <h2>SHOP</h2>
+        <div className="group">
+          <li>
+            <Link to="/shop/all" onClick={(e) => categoryChange(e, "all")}>
+              all
+            </Link>
+          </li>
+          
+          <li>
+          <Link to="/shop/earrings" onClick={(e) => categoryChange(e, "earrings")}>
+              earrings
+            </Link>
+          </li>
+          
+          <li>
+          <Link to="/shop/bracelet" onClick={(e) => categoryChange(e, "bracelet")}>
+              bracelet
+            </Link>
+          </li>
+          <li>
+          <Link to="/shop/necklace" onClick={(e) => categoryChange(e, "necklace")}>
+              necklace
+            </Link>
+          </li>
+          <li>
+          <Link to="/shop/anklet" onClick={(e) => categoryChange(e, "anklet")}>
+              anklet
+            </Link>
+          </li>
+          <li>
+          <Link to="/shop/crochet%20bag" onClick={(e) => categoryChange(e, "crochet bag")}>
+              crochet bag
+            </Link>
+          </li>
+        </div>
+      </ul>
+      <ul className="title">
+        <h2>SERIES</h2>
+        <div className="group">
+          <li>
+            <Link to="/shop/flower%20collection" onClick={(e) => categoryChange(e, "flower collection")}>
+              flower collection
+            </Link>
+          </li>
+          <li>
+          <Link to="/shop/sun%20collection" onClick={(e) => categoryChange(e, "sun collection")}>
+              sun collection
+            </Link>
+          </li>
+          <li>
+            <Link to="/shop/moon%20collection" onClick={(e) => categoryChange(e, "moon collection")}>
+              moon collection
+            </Link>
+          </li>
+          <li>
+            <Link to="/shop/gemstone%20collection"
+              onClick={(e) => categoryChange(e, "gemstone collection")}
+            >
+              gemstone collection
+            </Link>
+          </li>
+          <li>
+            <Link to="/shop/brass%20collection" onClick={(e) => categoryChange(e, "brass collection")}>
+              brass collection
+            </Link>
+          </li>
+        </div>
+      </ul>
+    </div>
         <div className="right">
           <div className="top">
             <h2>

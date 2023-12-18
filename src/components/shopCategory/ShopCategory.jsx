@@ -7,6 +7,8 @@ const ShopCategory = ({
   setDisplayProducts,
   sortType,
   sortProducts,
+  typeChange
+  
 }) => {
 
     const navigate = useNavigate();
@@ -30,6 +32,8 @@ const ShopCategory = ({
 
     // 使用 navigate 函數改變路徑
     navigate(`/shop/${category}`);
+    console.log("sortType",typeChange)
+    
   };
 
   // 現在filter功能無法跨頁正常使用12/17
