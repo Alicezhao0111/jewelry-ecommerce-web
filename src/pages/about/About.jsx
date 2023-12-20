@@ -1,8 +1,12 @@
 import React from 'react'
+import "./About.scss"
+import Error from '../../components/error/Error'
 
 function About() {
   return (
-    <div>About關於</div>
+    <div className='about'>
+      <Error />
+    </div>
   )
 }
 

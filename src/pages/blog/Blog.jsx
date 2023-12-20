@@ -1,9 +1,11 @@
 import React from 'react'
+import "./Blog.scss"
+import Error from '../../components/error/Error'
 
 function Blog() {
   return (
-    <div>
-      <h1>Blog</h1>
+    <div className='blog'>
+      <Error />
       </div>
   )
 }

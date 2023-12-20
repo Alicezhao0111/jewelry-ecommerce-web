@@ -5,6 +5,12 @@ import CloseIcon from "@mui/icons-material/Close";
 function Cart({ setCartOpen, selectedItem, setSelectedItem }) {
   const [sum, setSum] = useState(0);
 
+  const handleCloseCart = (e) =>{
+    if (e.target === e.currentTarget){
+      setCartOpen(false);
+    }
+  }
+
   const updateCart = (item, value) => {
     const newCart = selectedItem.map((cartItem) => {
       if (
@@ -40,7 +46,7 @@ function Cart({ setCartOpen, selectedItem, setSelectedItem }) {
   }, [selectedItem]);
 
   return (
-    <div className="cart">
+    <div className="cart" onClick={handleCloseCart}>
       <div className="cartContainer">
         <div className="textTop">
           <h3>Shopping Cart</h3>

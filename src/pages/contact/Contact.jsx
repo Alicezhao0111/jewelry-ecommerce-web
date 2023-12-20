@@ -1,8 +1,12 @@
 import React from 'react'
+import "./Contact.scss"
+import Error from '../../components/error/Error'
 
 function Contact() {
   return (
-    <div>Contact</div>
+    <div className='contact'>
+      <Error />
+    </div>
   )
 }
 

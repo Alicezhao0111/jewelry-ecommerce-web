@@ -1,8 +1,12 @@
 import React from 'react'
+import "./Faq.scss"
+import Error from '../../components/error/Error'
 
 function FAQ() {
   return (
-    <div>FAQ</div>
+    <div className='faq'>
+      <Error />
+    </div>
   )
 }
 

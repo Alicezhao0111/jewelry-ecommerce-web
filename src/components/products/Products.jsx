@@ -32,21 +32,6 @@ const Products = () => {
     console.log("typeChange",typeChange)
   }, [categoryName]);
 
-  //當分類、排序、產品任一數組發生改變時，重新設置展示的產品
-  
-  useEffect(() => {
-    const filtered = products.filter((product) => {
-      return typeChange === "all"
-        ? true
-        : product.category === typeChange ||
-          (product.series && product.series.includes(typeChange));
-    });
-  
-    // 只在 sortType 有值時進行排序
-    const sortedProducts = sortType ? sortProducts(sortType, filtered) : filtered;
-    setDisplayProducts(sortedProducts);
-  }, [typeChange, products, sortType]);
-
   //改變分類
   
   const categoryChange = (e, category) => {
@@ -71,6 +56,21 @@ const Products = () => {
     setSortType(event.target.value);
   };
 
+    //當分類、排序、產品任一數組發生改變時，重新設置展示的產品
+  
+    useEffect(() => {
+      const filtered = products.filter((product) => {
+        return typeChange === "all"
+          ? true
+          : product.category === typeChange ||
+            (product.series && product.series.includes(typeChange));
+      });
+    
+      // 只在 sortType 有值時進行排序
+      const sortedProducts = sortType ? sortProducts(sortType, filtered) : filtered;
+      setDisplayProducts(sortedProducts);
+    }, [typeChange, products, sortType]);
+
 
   //轉換貨幣
 
@@ -83,8 +83,6 @@ const Products = () => {
   const lastPostIndex = postsPerPage * currentPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
   const currentPosts = displayProducts.slice(firstPostIndex, lastPostIndex);
-
-  //12/18 Finish Notion Note
 
 
   return (
@@ -174,8 +172,8 @@ const Products = () => {
               </select>
               <select name="sort" id="sort" onChange={handleSortChange}>
                 <option>SORT BY</option>
-                <option value="date">Date, new to old</option>
                 <option value="price">Price, low to high</option>
+                <option value="date">Date, new to old</option>
               </select>
             </div>
           </div>

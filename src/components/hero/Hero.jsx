@@ -2,6 +2,7 @@ import React from "react";
 import "./Hero.scss";
 import landingpic from "../../assets/landingpic.png";
 import landingpic1 from "../../assets/landingpic1.png";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -14,7 +15,7 @@ const Hero = () => {
           <h2>Handmade</h2>
           <h2>Macrame</h2>
           <h2>Bohemian</h2>
-          <div className="btn">
+          <Link to="/shop" className="btn">
             <span>SHOP NOW</span>
             <svg
               width="38"
@@ -28,7 +29,7 @@ const Hero = () => {
                 fill="white"
               />
             </svg>
-          </div>
+          </Link>
         </div>
         <div className="decor">
           <svg

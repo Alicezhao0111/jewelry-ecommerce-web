@@ -40,7 +40,7 @@ const Instagram = () => {
         <div className="gallery">
           {pics.map((pic) => {
             return (
-              <a className="img-item" href={pic.url} key={pic.id}>
+              <a className="img-item" target="_blank" href={pic.url} key={pic.id}>
                 <img src={pic.img} alt="instagram" />
               </a>
             );

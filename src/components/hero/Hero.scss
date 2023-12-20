@@ -68,12 +68,12 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                color: white;
+                
                 width: 13rem;
                 height: 3rem;
                 border-radius: 0.625rem;
                 border: 2px solid #FFF;
-                background: rgba(217, 217, 217, 0.00);
+                
 
                 margin-top: 10%;
                 margin-left: 15%;
@@ -87,6 +87,10 @@
                     font-weight: 400;
                     line-height: normal;
                 }
+
+            }
+            .btn:hover, .btn:active{
+                background: #D4B2A8;
 
             }
         }
