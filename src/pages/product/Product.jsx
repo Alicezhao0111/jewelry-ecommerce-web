@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./product.scss";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/thumbs";
@@ -38,6 +38,7 @@ const Product = ({addToCart}) => {
   }, [productID]);
 
   const {
+    id,
     category,
     series,
     name,
@@ -92,9 +93,11 @@ const Product = ({addToCart}) => {
       <div className="productContainer">
         <div className="top">
           <div className="breadcrumb">
-            <a href="">SHOP-</a>
-            <a href="">BRACELET-</a>
-            <a href="">SUN BRACELET</a>
+            <Link to="/shop">SHOP</Link>
+            <span>-</span>
+            <Link to={`/shop/${category}`}>{category}</Link>
+            <span>-</span>
+            <span>{name}</span>
           </div>
           </div>
           <div className="bottom">
@@ -117,6 +120,7 @@ const Product = ({addToCart}) => {
           freeMode={true}
           watchSlidesProgress={true}
           modules={[FreeMode, Navigation, Thumbs]}
+          
           >
 
           {displayImg}

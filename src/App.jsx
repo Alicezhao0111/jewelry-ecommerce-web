@@ -16,6 +16,7 @@ import Product from "./pages/product/product";
 import Cart from "./components/cart/Cart";
 import Products from "./components/products/Products";
 import ShopCategory from "./components/shopCategory/ShopCategory";
+import CheckOut from "./pages/checkOut/CheckOut";
 
 
 const Layout = () => {
@@ -71,7 +72,7 @@ const Layout = () => {
         <Route path="/shop" element={<Shop />}>
           <Route path="/shop/:categoryName" element={<Products />} />
         </Route>
-        <Route path="/cart" element={<Cart/>} />
+        <Route path="/checkout" element={<CheckOut selectedItem={selectedItem} setSelectedItem={setSelectedItem}/>} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/faq" element={<Faq />} />
