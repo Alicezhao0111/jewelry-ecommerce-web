@@ -1,12 +1,11 @@
 import React from "react";
 import "./FinalCart.scss";
 import { Step } from "../step/Step";
-import arrowStep from "../../assets/arrowStep.svg"
+import arrowStep from "../../assets/arrowStep.svg";
+import whiteArrow from "../../assets/whiteArrow.svg";
 import necklace from "../../assets/necklace.png";
 import bracelet from "../../assets/bracelet.png";
-import earrings from "../../assets/earrings.png";
-import anklet from "../../assets/anklet.png";
-import crochetBag from "../../assets/crochetBag.png";
+import { Link } from "react-router-dom";
 
 function FinalCart(selectedItem, setSelectedItem) {
   const data = [
@@ -14,26 +13,37 @@ function FinalCart(selectedItem, setSelectedItem) {
       id: 1,
       name: "necklace",
       img: necklace,
+      style: "style option",
+      color: "color option",
+      price: "NT $620",
     },
     {
       id: 2,
       name: "bracelet",
       img: bracelet,
+      color: "color option",
+      price: "NT $780",
     },
     {
       id: 3,
-      name: "earrings",
-      img: earrings,
+      name: "bracelet",
+      img: bracelet,
+      color: "color option",
+      price: "NT $780",
     },
     {
       id: 4,
-      name: "anklet",
-      img: anklet,
+      name: "bracelet",
+      img: bracelet,
+      color: "color option",
+      price: "NT $780",
     },
     {
       id: 5,
-      name: "crochet bag",
-      img: crochetBag,
+      name: "bracelet",
+      img: bracelet,
+      color: "color option",
+      price: "NT $780",
     },
   ];
   return (
@@ -45,50 +55,85 @@ function FinalCart(selectedItem, setSelectedItem) {
             <h2>Shopping Cart</h2>
           </div>
           <div className="cartDetail">
-            <div className="formTitle">
-              <h3>Product</h3>
-              <h3>Description</h3>
-              <h3>Quantity</h3>
-              <h3>Price</h3>
+            <div className="row formTitle">
+              <h3 className="cell">Product</h3>
+              <h3 className="cell description">Description</h3>
+              <h3 className="cell">Quantity</h3>
+              <h3 className="cell">Price</h3>
             </div>
             <div className="productsForm">
-              <div className="singleProduct">
-                <div className="picBox">
-                  <img src="" alt="" />
-                </div>
-                <div className="description">
-                  <h2></h2>
-                  <span></span>
-                  <span></span>
-                </div>
-                <div className="quantity">
-                  <div className="quantityBox">
-                    <button className="setQuantity">-</button>
-                    <span>1</span>
-                    <button className="setQuantity">+</button>
+              {data.map((item) => (
+                <div key={item.id} className="row singleProduct">
+                  <div className="cell picBox">
+                    <img src={item.img} alt="" />
+                  </div>
+                  <div className="cell description">
+                    <h2>{item.name}</h2>
+                    <span>{item.style}</span>
+                    <span>{item.color}</span>
+                  </div>
+                  <div className="cell quantity">
+                    <div className="quantityBox">
+                      <button className="setQuantity">-</button>
+                      <span>1</span>
+                      <button className="setQuantity">+</button>
+                    </div>
+                  </div>
+                  <div className="cell price">
+                    <span>{item.price}</span>
                   </div>
                 </div>
-                <div className="price">
-                    <span>NT $620</span>
-                </div>
-              </div>
+              ))}
             </div>
             <div className="noticeContainer">
-                <p>Another NTS880 to benefit from free delivery costs</p>
+              <p>Another NTS880 to benefit from free delivery costs</p>
             </div>
             <div className="btnContainer">
-                <a href="">Continue Shopping</a>
-                <div className="next">
-                    <a href="">
-                        <h3>Next Step</h3>
-                        <img src={arrowStep} alt="" />
-                    </a>
-                   
-                </div>
+              <Link to="/shop" className="shoppingText">
+                Continue Shopping
+              </Link>
+              <div className="next">
+                <a href="" className="nextText">
+                  <h3>Next Step</h3>
+                  <img src={arrowStep} alt="" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
-        <div className="summary"></div>
+        <div className="summary">
+          <div className="summaryBox">
+            <div className="summaryTitle">
+              <h2>Summary</h2>
+            </div>
+            <div className="summaryDetail">
+              <div className="sum itemDetail">
+                <span>1 item</span>
+                <span>NT $620</span>
+              </div>
+              <div className="sum shippingDetail">
+                <span>Shipping</span>
+                <span>NT $60</span>
+              </div>
+            </div>
+            <div className="coupon">
+              <input type="text" placeholder="Discount code"/>
+              <button>
+                <span>APPLY</span>
+              </button>
+            </div>
+            <div className="sum totalDetail">
+              <span>Total</span>
+              <span>NT $620</span>
+            </div>
+            <div className="nextBtn">
+              <div className="btnBox">
+                <h3>NEXT STEP</h3>
+                <img src={whiteArrow} alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
