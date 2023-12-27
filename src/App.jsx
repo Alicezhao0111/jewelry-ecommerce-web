@@ -12,7 +12,7 @@ import Shop from "./pages/Shop/Shop";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import "./reset.scss"
-import Product from "./pages/product/product";
+import Product from "./pages/product/Product";
 import Cart from "./components/cart/Cart";
 import Products from "./components/products/Products";
 import ShopCategory from "./components/shopCategory/ShopCategory";
@@ -54,6 +54,28 @@ const Layout = () => {
     }
   
     console.log("選我", product);
+    console.log("uniqueId", uniqueId);
+    console.log("productWithUniqueId", productWithUniqueId);
+    console.log("existingItemIndex", existingItemIndex);
+    console.log("updatedCart",[...selectedItem]);
+  };
+
+  const updateCart = (item, value) => {
+    const newCart = selectedItem.map((cartItem) => {
+      if (
+        cartItem.id === item.id &&
+        cartItem.selectedColor === item.selectedColor &&
+        cartItem.selectedOption === item.selectedOption
+      ) {
+        return {
+          ...cartItem,
+          selectedQuantity: parseInt(value),
+        };
+      }
+      return cartItem;
+    });
+    setSelectedItem(newCart);
+    console.log("更新數量的購物車 ", newCart);
   };
   
 
@@ -65,14 +87,14 @@ const Layout = () => {
   return (
     <div className="app">
       <Navbar setCartOpen={setCartOpen} selectedItem={selectedItem}/>
-      {cartOpen && <Cart setCartOpen={setCartOpen} selectedItem={selectedItem} setSelectedItem={setSelectedItem}/>}
+      {cartOpen && <Cart setCartOpen={setCartOpen} selectedItem={selectedItem} setSelectedItem={setSelectedItem} updateCart={updateCart}/>}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product/:productID" element={<Product addToCart={addToCart} selectedItem={selectedItem} setSelectedItem={setSelectedItem}/>} />
         <Route path="/shop" element={<Shop />}>
           <Route path="/shop/:categoryName" element={<Products />} />
         </Route>
-        <Route path="/checkout" element={<CheckOut selectedItem={selectedItem} setSelectedItem={setSelectedItem}/>} />
+        <Route path="/checkout" element={<CheckOut selectedItem={selectedItem} setSelectedItem={setSelectedItem} updateCart={updateCart}/>} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/faq" element={<Faq />} />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./FinalCart.scss";
 import { Step } from "../step/Step";
 import arrowStep from "../../assets/arrowStep.svg";
@@ -7,45 +7,11 @@ import necklace from "../../assets/necklace.png";
 import bracelet from "../../assets/bracelet.png";
 import { Link } from "react-router-dom";
 
-function FinalCart(selectedItem, setSelectedItem) {
-  const data = [
-    {
-      id: 1,
-      name: "necklace",
-      img: necklace,
-      style: "style option",
-      color: "color option",
-      price: "NT $620",
-    },
-    {
-      id: 2,
-      name: "bracelet",
-      img: bracelet,
-      color: "color option",
-      price: "NT $780",
-    },
-    {
-      id: 3,
-      name: "bracelet",
-      img: bracelet,
-      color: "color option",
-      price: "NT $780",
-    },
-    {
-      id: 4,
-      name: "bracelet",
-      img: bracelet,
-      color: "color option",
-      price: "NT $780",
-    },
-    {
-      id: 5,
-      name: "bracelet",
-      img: bracelet,
-      color: "color option",
-      price: "NT $780",
-    },
-  ];
+function FinalCart({selectedItem, updateCart, setSelectedItem}) {
+  const [sum, setSum] = useState(0);
+  console.log("傳遞進來的",selectedItem)
+
+  
   return (
     <div className="finalCart">
       <Step />
@@ -62,31 +28,41 @@ function FinalCart(selectedItem, setSelectedItem) {
               <h3 className="cell">Price</h3>
             </div>
             <div className="productsForm">
-              {data.map((item) => (
-                <div key={item.id} className="row singleProduct">
+              {selectedItem.map((item) => (
+                <div key={item.uniqueId} className="row singleProduct">
                   <div className="cell picBox">
                     <img src={item.img} alt="" />
                   </div>
                   <div className="cell description">
                     <h2>{item.name}</h2>
-                    <span>{item.style}</span>
-                    <span>{item.color}</span>
+                    <span>{item.selectedOption}</span>
+                    <span>{item.selectedColor}</span>
                   </div>
                   <div className="cell quantity">
                     <div className="quantityBox">
-                      <button className="setQuantity">-</button>
-                      <span>1</span>
-                      <button className="setQuantity">+</button>
+                      <button className="setQuantity" onClick={() =>
+                            updateCart(item, item.selectedQuantity - 1)
+                          }
+                          disabled={item.selectedQuantity <= 1}>-</button>
+                      <span>{item.selectedQuantity}</span>
+                      <button className="setQuantity" onClick={() =>
+                            updateCart(item, item.selectedQuantity + 1)
+                          }>+</button>
                     </div>
                   </div>
                   <div className="cell price">
-                    <span>{item.price}</span>
+                    <span>NT${item.price * item.selectedQuantity}</span>
                   </div>
                 </div>
               ))}
             </div>
             <div className="noticeContainer">
-              <p>Another NTS880 to benefit from free delivery costs</p>
+              <p>
+            {sum < 1500
+                ? `Another NT$${1500 - sum} to benefit from free delivery costs`
+                : "Nice! You Get Free Delivery!"}
+                {/* 12/27 sum功能尚未成功 */}
+                </p>
             </div>
             <div className="btnContainer">
               <Link to="/shop" className="shoppingText">

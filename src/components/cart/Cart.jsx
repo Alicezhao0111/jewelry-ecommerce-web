@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./Cart.scss";
 import CloseIcon from "@mui/icons-material/Close";
+import { useNavigate } from "react-router-dom";
 
-function Cart({ setCartOpen, selectedItem, setSelectedItem }) {
+function Cart({ setCartOpen, selectedItem, setSelectedItem, updateCart }) {
   const [sum, setSum] = useState(0);
 
   const handleCloseCart = (e) =>{
@@ -10,24 +11,6 @@ function Cart({ setCartOpen, selectedItem, setSelectedItem }) {
       setCartOpen(false);
     }
   }
-
-  const updateCart = (item, value) => {
-    const newCart = selectedItem.map((cartItem) => {
-      if (
-        cartItem.id === item.id &&
-        cartItem.selectedColor === item.selectedColor &&
-        cartItem.selectedOption === item.selectedOption
-      ) {
-        return {
-          ...cartItem,
-          selectedQuantity: parseInt(value),
-        };
-      }
-      return cartItem;
-    });
-    setSelectedItem(newCart);
-    console.log("更新數量的購物車 ", newCart);
-  };
 
   const handleDeleteItem = (itemUniqueId) => {
     const newCart = selectedItem.filter(
@@ -44,6 +27,14 @@ function Cart({ setCartOpen, selectedItem, setSelectedItem }) {
     setSum(total);
     console.log(total);
   }, [selectedItem]);
+
+  let navigate = useNavigate();
+
+  const handleCheckOut=()=>{
+    
+    navigate('/checkout');
+    setCartOpen(false);
+  }
 
   return (
     <div className="cart" onClick={handleCloseCart}>
@@ -144,7 +135,7 @@ function Cart({ setCartOpen, selectedItem, setSelectedItem }) {
             </div>
           </div>
           <div className="checkBtn">
-            <button>
+            <button onClick={handleCheckOut}>
               <span>CHECKOUT</span>
             </button>
           </div>

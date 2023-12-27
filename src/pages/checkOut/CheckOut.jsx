@@ -2,10 +2,10 @@ import React from 'react'
 import "./CheckOut.scss"
 import FinalCart from '../../components/finalCart/FinalCart'
 
-const CheckOut = () => {
+const CheckOut = ({selectedItem, updateCart, setSelectedItem}) => {
   return (
     <div className='checkOut'>
-        <FinalCart />
+        <FinalCart selectedItem={selectedItem} updateCart={updateCart} setSelectedItem={setSelectedItem}/>
     </div>
   )
 }
