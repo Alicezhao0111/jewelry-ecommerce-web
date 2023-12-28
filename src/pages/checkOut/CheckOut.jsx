@@ -1,11 +1,11 @@
 import React from 'react'
 import "./CheckOut.scss"
-import FinalCart from '../../components/finalCart/FinalCart'
+import Form from '../../components/form/Form'
 
-const CheckOut = ({selectedItem, updateCart, setSelectedItem}) => {
+const CheckOut = () => {
   return (
     <div className='checkOut'>
-        <FinalCart selectedItem={selectedItem} updateCart={updateCart} setSelectedItem={setSelectedItem}/>
+        <Form />
     </div>
   )
 }

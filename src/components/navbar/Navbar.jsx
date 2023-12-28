@@ -25,7 +25,7 @@ const Navbar = ({setCartOpen, selectedItem}) => {
     setActiveItem(activePath); //動畫底線
 
     function changeBg(){ //nav樣式設定
-      const hasShopPath = location.pathname.includes('/shop')||location.pathname.includes('/product')||location.pathname.includes('/checkout');
+      const hasShopPath = location.pathname.includes('/shop')||location.pathname.includes('/product')||location.pathname.includes('/checkout')||location.pathname.includes('/cart');
       setDarkBg(hasShopPath);
   
     };

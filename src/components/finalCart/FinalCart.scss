@@ -82,6 +82,19 @@
                 max-height: 55vh;
                 overflow-y: auto;
 
+                .emptyCart{
+                    height: 100px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+    
+                    p{
+                        margin-top: 50px;
+                        color: #6F6152;
+                    }
+                    
+                }
+
                 .singleProduct {
 
                     .picBox {
@@ -122,6 +135,8 @@
                                 border: none;
                                 background-color: inherit;
                                 color: var(--Dark-grey, #6F6152);
+
+                                cursor: pointer;
                             }
 
                             span {
@@ -145,6 +160,17 @@
                         font-style: normal;
                         font-weight: 400;
                         line-height: normal;
+
+                        display: flex;
+                        justify-content: space-between;
+
+                        svg{
+                            align-self: end;
+                            font-size: 1.1rem;
+                            color: var(--Dark-grey, #6F6152);
+                            cursor: pointer;
+    
+                        }
                     }
                 }
 
@@ -198,7 +224,10 @@
                 .next {
                     .nextText {
                         display: flex;
-
+                        align-items: center;
+                        border: none;
+                        background-color: inherit;
+                        cursor: pointer;
                         h3 {
                             color: var(--Dark-Red, #B14E31);
                             font-family: Gilda Display;
@@ -206,13 +235,32 @@
                             font-style: normal;
                             font-weight: 400;
                             line-height: normal;
+
+                            position: relative;
                         }
 
                         img {
                             width: 20px;
                             margin-left: 9px;
                         }
+
+                        h3::after{
+                            position: absolute;
+                            content: '';
+                            bottom: -4px;
+                            left: 0;
+                            width: 0;
+                            height: 1px;
+                            background: #B14E31;
+                            transition: width 0.3s ease;
+            
+                        }
+            
+                        h3:hover::after, h3:active::after{
+                            width: 100%;
+                        }
                     }
+
                 }
 
 

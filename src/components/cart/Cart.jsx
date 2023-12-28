@@ -32,7 +32,7 @@ function Cart({ setCartOpen, selectedItem, setSelectedItem, updateCart }) {
 
   const handleCheckOut=()=>{
     
-    navigate('/checkout');
+    navigate('/cart');
     setCartOpen(false);
   }
 
@@ -130,7 +130,7 @@ function Cart({ setCartOpen, selectedItem, setSelectedItem, updateCart }) {
               <span>NT ${sum}</span>
             </div>
             <div className="deliveryInput">
-              <h4>Delivery :</h4>
+              <h4>Shipping :</h4>
               <span>{sum < 1500 ? "NT $60" : "Free"}</span>
             </div>
           </div>

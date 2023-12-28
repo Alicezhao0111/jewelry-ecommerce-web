@@ -17,6 +17,9 @@ import Cart from "./components/cart/Cart";
 import Products from "./components/products/Products";
 import ShopCategory from "./components/shopCategory/ShopCategory";
 import CheckOut from "./pages/checkOut/CheckOut";
+import Form from "./components/form/Form";
+import FinalCart from "./components/finalCart/FinalCart";
+import ConfirmCart from "./pages/confirmCart/confirmCart";
 
 
 const Layout = () => {
@@ -77,6 +80,14 @@ const Layout = () => {
     setSelectedItem(newCart);
     console.log("更新數量的購物車 ", newCart);
   };
+
+  const handleDeleteItem = (itemUniqueId) => {
+    const newCart = selectedItem.filter(
+      (item) => item.uniqueId !== itemUniqueId
+    );
+    setSelectedItem(newCart);
+    console.log("unique", itemUniqueId);
+  };
   
 
   useEffect(()=>{
@@ -87,14 +98,15 @@ const Layout = () => {
   return (
     <div className="app">
       <Navbar setCartOpen={setCartOpen} selectedItem={selectedItem}/>
-      {cartOpen && <Cart setCartOpen={setCartOpen} selectedItem={selectedItem} setSelectedItem={setSelectedItem} updateCart={updateCart}/>}
+      {cartOpen && <Cart setCartOpen={setCartOpen} selectedItem={selectedItem} setSelectedItem={setSelectedItem} updateCart={updateCart} handleDeleteItem={handleDeleteItem}/>}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product/:productID" element={<Product addToCart={addToCart} selectedItem={selectedItem} setSelectedItem={setSelectedItem}/>} />
         <Route path="/shop" element={<Shop />}>
           <Route path="/shop/:categoryName" element={<Products />} />
         </Route>
-        <Route path="/checkout" element={<CheckOut selectedItem={selectedItem} setSelectedItem={setSelectedItem} updateCart={updateCart}/>} />
+        <Route path="/cart" element={<ConfirmCart selectedItem={selectedItem} setSelectedItem={setSelectedItem} updateCart={updateCart} handleDeleteItem={handleDeleteItem}/>}/>
+        <Route path="/checkout" element={<CheckOut />}/>
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/faq" element={<Faq />} />
