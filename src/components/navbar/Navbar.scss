@@ -11,10 +11,10 @@
 
 
 
-    .item a{
+    .item a {
         color: white;
     }
-    
+
     .wrapper {
         height: 55px;
         padding-top: 1.2rem;
@@ -53,7 +53,8 @@
 
                     position: relative;
                 }
-                .item::after{
+
+                .item::after {
                     position: absolute;
                     content: '';
                     bottom: -5px;
@@ -64,8 +65,9 @@
                     transition: width 0.3s ease;
 
                 }
+
                 .item.active::after,
-                .item:hover::after{
+                .item:hover::after {
                     width: 100%;
                 }
             }
@@ -80,9 +82,10 @@
                 gap: 0.5rem;
                 cursor: pointer;
 
-                .cartIcon{
+                .cartIcon {
                     position: relative;
-                    span{
+
+                    span {
                         font-size: 12px;
                         width: 16px;
                         height: 16px;
@@ -91,7 +94,7 @@
                         color: white;
                         position: absolute;
                         right: -5px;
-                        top:-5px;
+                        top: -5px;
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -101,19 +104,80 @@
             }
         }
     }
-    .wrapper.active{
+
+    .wrapper.active {
 
         background: #F3F0ED;
-        color:#BDA18C;
-        a{
-            color:#BDA18C;
+        color: #BDA18C;
+
+        a {
+            color: #BDA18C;
         }
+
         .item::after,
         .item.active::after,
-        .item:hover::after
-        {
+        .item:hover::after {
             background: #BDA18C;
         }
+
+
+    }
+
+    .toggleNavbar,
+    .closeNavbar {
+        display: none;
+    }
+
+}
+
+@media (min-width: 760px) and (max-width:1024.98px) {
+    .navbar {
+        .wrapper {
+            padding-left: 2rem;
+            padding-right: 2.5rem;
+        }
+    }
+}
+
+@media (max-width:759.98px) {
+    .navbar {
+
+        .toggleNavbar,
+        .closeNavbar {
+            display: block;
+        }
+
+        .wrapper {
+            padding-left: 2rem;
+            padding-right: 2rem;
+            padding-top: 0;
+            align-items: center;
+
+
+            .left {
+
+                .logo {
+                    font-size: 1.8rem;
+
+                }
+
+                .menu {
+                    display: none;
+                }
+            }
+
+            .right {
+                gap: 10px;
+                .icons {
+
+                    .hiddenIcon {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+
     }
 
 }

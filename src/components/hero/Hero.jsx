@@ -101,7 +101,7 @@ const Hero = () => {
       </div>
       <div className="bottom">
         <div className="marquee">
-          <span>For all the free spirits living in this modern world</span>
+          <span>For all the free spirits living in this modern world . For all the free spirits living in this modern world . </span>
         </div>
       </div>
     </div>

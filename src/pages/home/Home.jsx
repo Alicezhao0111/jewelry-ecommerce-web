@@ -33,7 +33,7 @@ function Home() {
     <div className="home">
     <Hero />
     <Artist />
-    <Bestseller products={products}/>
+    {/* <Bestseller products={products}/> */}
     <Subscribe />
     <Category />
     <Gift />
