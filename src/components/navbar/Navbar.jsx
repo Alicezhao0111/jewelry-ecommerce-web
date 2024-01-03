@@ -18,6 +18,7 @@ const Navbar = ({ setCartOpen, selectedItem }) => {
   const [darkBg, setDarkBg] = useState(false);
   const [cartQuantity, setCartQuantity] = useState("0");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [colorChange, setColorChange] = useState(false);
 
   const location = useLocation();
 
@@ -65,13 +66,26 @@ const Navbar = ({ setCartOpen, selectedItem }) => {
     setCartQuantity(totalQuantity);
   }, [selectedItem]);
 
+  const openThisMenu=()=>{
+    setMenuOpen(true)
+    setColorChange(true)
+    console.log("menu狀態",menuOpen)
+    document.body.style.overflow ="hidden"
+  }
+  const closeThisMenu=()=>{
+    setMenuOpen(false)
+    setColorChange(false)
+    console.log("menu狀態",menuOpen)
+    document.body.style.overflow ="auto"
+  }
+
   return (
     <div className="navbar">
       <div
         className={activeNav || darkBg === true ? "wrapper active" : "wrapper"}
       >
         <div className="left">
-          <div className="logo">
+          <div className={colorChange === true ? "logo active":"logo"} onClick={closeThisMenu}>
             <Link to="/">Boho Daze</Link>
           </div>
           <ul className="menu">
@@ -96,7 +110,7 @@ const Navbar = ({ setCartOpen, selectedItem }) => {
         <div className="right">
           <div className="icons">
             <SearchOutlinedIcon className="hiddenIcon" />
-            <div className="cartIcon" onClick={() => setCartOpen(true)}>
+            <div className={colorChange === true ? "cartIcon active":"cartIcon"} onClick={() => {setCartOpen(true); closeThisMenu();}}>
               <ShoppingCartOutlinedIcon />
               <span>{cartQuantity}</span>
             </div>
@@ -106,7 +120,7 @@ const Navbar = ({ setCartOpen, selectedItem }) => {
         <div className="toggleNavbar">
           <MenuIcon
             className="menuIcon"
-            onClick={() => setMenuOpen(!menuOpen)}
+            onClick={openThisMenu}
           />
         </div>
         </div>
@@ -119,30 +133,33 @@ const Navbar = ({ setCartOpen, selectedItem }) => {
             <div className="closeNavbar">
               <CloseIcon
                 className="closeIcon"
-                onClick={() => setMenuOpen(menuOpen)}
+                onClick={closeThisMenu}
               />
             </div>
-            <ul>
-              <li className={activeItem === "shop" ? "item active" : "item"}>
+            <ul className="mobileList">
+              <li className="mobileItem" onClick={closeThisMenu}>
                 <Link to="/shop">SHOP</Link>
               </li>
-              <li className={activeItem === "about" ? "item active" : "item"}>
+              <li className="mobileItem" onClick={closeThisMenu}>
                 <Link to="/about">ABOUT</Link>
               </li>
-              <li className={activeItem === "blog" ? "item active" : "item"}>
+              <li className="mobileItem" onClick={closeThisMenu}>
                 <Link to="/blog">BLOG</Link>
               </li>
-              <li className={activeItem === "faq" ? "item active" : "item"}>
+              <li className="mobileItem" onClick={closeThisMenu}>
                 <Link to="/faq">FAQ</Link>
               </li>
-              <li className={activeItem === "contact" ? "item active" : "item"}>
+              <li className="mobileItem" onClick={closeThisMenu}>
                 <Link to="/contact">CONTACT</Link>
               </li>
+              <li className="mobileItem" onClick={closeThisMenu}>
+                <span>SEARCH</span>
+              </li>
+              <li className="mobileItem login" onClick={closeThisMenu}>
+                <span>Login</span>
+              </li>
             </ul>
-            <div className="icons">
-              <SearchOutlinedIcon />
-              <PersonOutlineOutlinedIcon />
-            </div>
+
           </div>
         )}
       </div>
