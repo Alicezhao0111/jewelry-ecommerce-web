@@ -1,6 +1,5 @@
 import React from "react";
 import "./Hero.scss";
-import landingpic from "../../assets/landingpic.png";
 import landingpic1 from "../../assets/landingpic1.png";
 import { Link } from "react-router-dom";
 

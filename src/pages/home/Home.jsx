@@ -32,7 +32,7 @@ function Home() {
   return (
     <div className="home">
     <Hero />
-    <Artist />
+    {/* <Artist /> */}
     {/* <Bestseller products={products}/> */}
     <Subscribe />
     <Category />
