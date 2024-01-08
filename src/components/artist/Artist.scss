@@ -33,7 +33,7 @@
 
                 width: 70%;
                 padding-top: 3%;
-
+                
                 .content {
 
                     align-self: start;
@@ -46,10 +46,8 @@
                         font-style: normal;
                         font-weight: 400;
                         line-height: normal;
-
                         margin-bottom: 2%;
                     }
-
                     p {
                         color: var(--Dark-grey, #6F6152);
                         font-family: Belleza;
@@ -57,11 +55,8 @@
                         font-style: normal;
                         font-weight: 400;
                         line-height: 146%;
-                        /* 1.825rem */
-
                         margin-bottom: 6%;
                     }
-
                     .button {
                         
                         display: flex;
@@ -80,14 +75,12 @@
                         }
                     }
                 }
-
                 .pic {
                     width: 22%;
 
                     img {
                         width: 100%;
                     }
-
                 }
             }
         }
@@ -101,7 +94,6 @@
             height: 42.7%;
             margin-top: -5%;
             
-
             h3 {
                 color: var(--Dark-grey, #6F6152);
                 font-family: Gilda Display;
@@ -113,13 +105,70 @@
                 margin-left: 6%;
                 padding-right: 5%;
                 white-space: nowrap;
-
                 
             }
-
             img{
                 height: 100%;
+            }
+        }
+    }
+}
 
+@media (min-width: 700px) and (max-width:1024.98px){
+    .artist {
+        .container {
+            width: 82%;
+            margin:8% 0;
+            .top {
+                gap: 15px;
+                .left {
+                    margin-top: 2.5vw;
+                    img {
+                        
+                    }
+                }
+            }
+        }
+
+    }
+}
+@media (max-width:699.98px){
+    .artist {
+        .container {
+            width: 80%;
+            margin:8% 0;
+            .top {
+                
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                .left {
+                    width: auto;
+                    
+                    
+                    img {
+                        min-width: 150px;
+                    }
+                }
+                .right{
+                    width: 100%;
+                    align-items: center;
+                    .content{
+
+                    }
+                    .pic{
+                        margin-top: 8%;
+                        width: 55%;
+
+                    }
+                }
+
+            }
+            .bottom {
+                margin-top: 8%;
+                img{
+                    display: none;
+                }
             }
         }
     }

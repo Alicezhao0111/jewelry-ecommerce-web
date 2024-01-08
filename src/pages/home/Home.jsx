@@ -32,8 +32,8 @@ function Home() {
   return (
     <div className="home">
     <Hero />
-    {/* <Artist /> */}
-    {/* <Bestseller products={products}/> */}
+    <Artist />
+    <Bestseller products={products}/>
     <Subscribe />
     <Category />
     <Gift />
