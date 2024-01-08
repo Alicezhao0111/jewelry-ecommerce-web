@@ -33,7 +33,7 @@
 
                 width: 70%;
                 padding-top: 3%;
-                
+
                 .content {
 
                     align-self: start;
@@ -165,9 +165,15 @@
 
             }
             .bottom {
+                width: 100%;
+                justify-content: center;
                 margin-top: 8%;
                 img{
                     display: none;
+                }
+                h3{
+                margin-left: 0;
+                padding-right: 0;
                 }
             }
         }
