@@ -114,7 +114,9 @@ const Navbar = ({ setCartOpen, selectedItem }) => {
               <ShoppingCartOutlinedIcon />
               <span>{cartQuantity}</span>
             </div>
-            <PersonOutlineOutlinedIcon className="hiddenIcon" />
+            <Link to="/user">
+              <PersonOutlineOutlinedIcon className="hiddenIcon" />
+            </ Link>
           </div>
                   {/* 漢堡菜單圖示 */}
         <div className="toggleNavbar">

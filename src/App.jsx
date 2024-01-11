@@ -20,6 +20,7 @@ import CheckOut from "./pages/checkOut/CheckOut";
 import Form from "./components/form/Form";
 import FinalCart from "./components/finalCart/FinalCart";
 import ConfirmCart from "./pages/confirmCart/confirmCart";
+import User from "./pages/user/User";
 
 
 const Layout = () => {
@@ -111,6 +112,7 @@ const Layout = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/user" element={<User />} />
       </Routes>
       <Footer />
     </div>
