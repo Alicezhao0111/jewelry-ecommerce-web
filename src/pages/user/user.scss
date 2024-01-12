@@ -1,18 +1,18 @@
 .user{
     width: 100%;
-    min-height: 100vh;
+    min-height: 900px;
     
     .background{
-        min-height: 100vh;
+        min-height: 900px;
         background: url(../../assets/userBackground.jpg) no-repeat;
         background-position: center;
         background-size: cover;
         .shadow{
-            min-height: 100vh;
+            min-height: 900px;
             background: rgba(162, 144, 144, 0.2);
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            padding-top: 180px;
+            padding-left: 150px;
+
         }
     }
 }
