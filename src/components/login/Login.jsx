@@ -46,6 +46,10 @@ const Login = () => {
     }
   }
 
+  const forgotPW =()=>{
+    navigate ("/user/password")
+  }
+
   return (
     <div className="login">
       <div className="signContainer">
@@ -61,16 +65,16 @@ const Login = () => {
             </div>
           )}
           <div className="option">
-            <div className="account">
-              <span onClick={() => toggleForm(false)}>Create an account</span>
+            <div className={`optionType ${!isSignInForm ? 'activeOption' : ''}`} >
+              <span className={`spanType ${!isSignInForm ? 'activeSpan' : ''}`} onClick={() => toggleForm(false)}>Create an account</span>
             </div>
-            <div className="signIn">
-              <span onClick={() => toggleForm(true)}>Sign in</span>
+            <div className={`optionType ${isSignInForm ? 'activeOption' : ''}`} >
+              <span className={`spanType ${isSignInForm ? 'activeSpan' : ''}`} onClick={() => toggleForm(true)}>Sign in</span>
             </div>
           </div>
           {isSignInForm ? (
             <div className="formTable">
-              <form name="accountForm" id="accountForm" action="" method="post">
+              <form name="signForm" id="signForm" action="" method="post">
                 <div className="formGrid">
                   <div className="formField">
                     <label htmlFor="email">Email</label>
@@ -101,6 +105,9 @@ const Login = () => {
                   <button type="button" onClick={handleSign}>
                     <h3>SIGN IN</h3>
                   </button>
+                </div>
+                <div className="forgotBtn">
+                    <span onClick={forgotPW}>Forgot your password?</span>
                 </div>
               </form>
             </div>

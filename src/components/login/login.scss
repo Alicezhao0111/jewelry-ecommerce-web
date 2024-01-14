@@ -41,15 +41,16 @@
 
                     margin-bottom: 10px;
                 }
-                span{
-                    color: var(--Dark-Red, #B14E31);
-font-family: Gilda Display;
-font-size: 0.9rem;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
 
-margin-bottom: 10px;
+                span {
+                    color: var(--Dark-Red, #B14E31);
+                    font-family: Gilda Display;
+                    font-size: 0.9rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+
+                    margin-bottom: 10px;
                 }
             }
 
@@ -61,11 +62,32 @@ margin-bottom: 10px;
 
                 margin-top: 15px;
 
-                .account {
+
+
+                .optionType {
+                    cursor: pointer;
+
+                    .spanType {
+                        display: block;
+
+                        color: var(--Dark-grey, #6F6152);
+                        font-family: Belleza;
+                        font-size: 0.9rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        margin-bottom: 3px;
+
+                    }
+
+                }
+
+                .activeOption {
                     border-bottom: 1px solid #B14E31;
                     cursor: pointer;
 
-                    span {
+
+                    .activeSpan {
                         display: block;
 
                         color: var(--Dark-Red, #B14E31);
@@ -79,35 +101,47 @@ margin-bottom: 10px;
                     }
                 }
 
-                .signIn {
-                    cursor: pointer;
-
-                    span {
-                        display: block;
-
-                        color: var(--Dark-grey, #6F6152);
-                        font-family: Belleza;
-                        font-size: 0.9rem;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: normal;
-
-                        margin-bottom: 3px;
-                    }
-
-                }
             }
 
             .formTable {
                 width: 100%;
-                
 
-            #accountForm{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                gap: 15px;
-            }
+
+                #accountForm {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    gap: 25px;
+                }
+
+                #signForm {
+                    width: 55%;
+                    margin: 0 auto;
+
+                    .formGrid {
+                        display: flex;
+                        flex-direction: column;
+                        margin-bottom: 30px;
+                    }
+
+                    .forgotBtn {
+                        text-align: center;
+                        
+                        margin-top: 25px;
+
+                        span {
+                            color: var(--Dark-grey, #6F6152);
+                            font-family: Belleza;
+                            font-size: 0.9rem;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+
+                            cursor: pointer;
+
+                        }
+                    }
+                }
 
 
                 .formGrid {
@@ -170,18 +204,20 @@ margin-bottom: 10px;
                     }
                 }
 
-                .privacy{
-                        border: 1px solid #B14E31;
-                        background-color: #B14E31;
-                    label{
+                .privacy {
+                    border: 1px solid #B14E31;
+                    background-color: #B14E31;
+
+                    label {
                         color: #FFF;
                     }
                 }
-                .formBtn{
+
+                .formBtn {
                     display: flex;
                     justify-content: center;
-                    
-                    button{
+
+                    button {
                         background: var(--brown, #BDA18C);
                         width: 35%;
                         padding: 10px;
@@ -192,28 +228,30 @@ margin-bottom: 10px;
                         align-items: center;
 
                         cursor: pointer;
-                        
 
-                    h3 {
-                        color: #FFF;
-                        text-align: center;
-                        font-family: Gilda Display;
-                        font-size: 1.3vw;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: normal;
+
+                        h3 {
+                            color: #FFF;
+                            text-align: center;
+                            font-family: Gilda Display;
+                            font-size: 1.3vw;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+
+                        }
 
                     }
 
-                }
-                button:hover, button:active{
-                    background: var(--brown, #D4B2A8);
-                }
+                    button:hover,
+                    button:active {
+                        background: var(--brown, #D4B2A8);
+                    }
                 }
 
             }
 
         }
-        
+
     }
 }

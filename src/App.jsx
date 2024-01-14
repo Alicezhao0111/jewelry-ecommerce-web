@@ -21,6 +21,7 @@ import Form from "./components/form/Form";
 import FinalCart from "./components/finalCart/FinalCart";
 import ConfirmCart from "./pages/confirmCart/confirmCart";
 import User from "./pages/user/User";
+import Password from "./components/password/Password";
 
 
 const Layout = () => {
@@ -112,7 +113,9 @@ const Layout = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/user" element={<User />} />
+        <Route path="/user" element={<User />}>
+          <Route path="password" element={<Password />} />
+        </Route>
       </Routes>
       <Footer />
     </div>
