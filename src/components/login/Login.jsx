@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./login.scss";
-import { useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 import axios from "axios";
 
@@ -25,6 +25,13 @@ const Login = () => {
   };
 
   const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.showSignInForm) {
+      setIsSignInForm(true);
+    }
+  }, [location]);
 
   async function handleSign() {
     if (!email || !firstName || !password || !birthDate) {
@@ -46,9 +53,6 @@ const Login = () => {
     }
   }
 
-  const forgotPW =()=>{
-    navigate ("/user/password")
-  }
 
   return (
     <div className="login">
@@ -107,7 +111,9 @@ const Login = () => {
                   </button>
                 </div>
                 <div className="forgotBtn">
-                    <span onClick={forgotPW}>Forgot your password?</span>
+                    <div className="btn">
+                        <Link to="/user/password">Forgot your password?</Link>
+                    </div>
                 </div>
               </form>
             </div>
