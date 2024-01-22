@@ -1,8 +1,10 @@
 import React from "react";
 import "./Bestseller.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Navigation, Pagination, Scrollbar, A11y, FreeMode } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/free-mode";
+import 'swiper/css/scrollbar';
 import { Link } from "react-router-dom";
 
 const Bestseller = ({products}) => {
@@ -19,7 +21,6 @@ const Bestseller = ({products}) => {
             Explore our Bestsellers
             <br />
             Handcrafted treasures that capture the essence of wanderlust.
-            Limited stock available!
           </p>
           <div className="button">
             <span>Shop More</span>
@@ -39,7 +40,20 @@ const Bestseller = ({products}) => {
         </div>
         <div className="right">
             
-          <Swiper spaceBetween={35} slidesPerView={3.3}>
+          <Swiper scrollbar={{
+          hide: false, draggable:true,
+        }} spaceBetween={25} slidesPerView={3} freeMode={true} modules={[FreeMode, Scrollbar]} grabCursor={true} 
+        breakpoints={{
+          100:{
+            slidesPerView: 2.5,
+            spaceBetween: 20,
+
+          },
+          577: {
+            slidesPerView: 3,
+            spaceBetween: 25,
+          },}}
+        >
             
                 {selectedBestSeller.map((data)=>{
                     return (
@@ -54,6 +68,12 @@ const Bestseller = ({products}) => {
                         </SwiperSlide>
                     )
                 })}
+
+<SwiperSlide>
+        <div className="empty-slide"> {/* 或者放一個空白圖片 */}
+            {/* 可以放置一些文本或保持空白 */}
+        </div>
+    </SwiperSlide>
                 
           </Swiper>
         </div>

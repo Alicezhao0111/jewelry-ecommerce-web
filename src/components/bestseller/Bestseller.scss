@@ -5,15 +5,15 @@
     margin-bottom: 7%;
     display: flex;
     justify-content: end;
+    padding: 3% 0 5% 0;
     background-color: #CAB4A3;
     overflow: hidden;
 
     .container {
         width: 90%;
-        margin-top: 8%;
-        margin-bottom: 10%;
         display: flex;
-        justify-content: space-between;
+        
+        gap: 30px;
         align-items: center;
 
         .left {
@@ -70,12 +70,12 @@
         .right {
             position: relative;
             height: 350px;
-            width: 880px; //之後要設定media
-            // background-color: #B14E31;
+            width: 820px;
 
             .swiper {
                 height: 350px;
-                padding-bottom: 30px;
+                
+                padding-bottom: 60px;
 
             }
 
@@ -86,13 +86,27 @@
                 overflow: hidden;
                 border-radius: 300px 300px 0 0;
 
-                padding-bottom: 30px;
+                padding-bottom: 60px;
+            }
+
+            .swiper-scrollbar-horizontal{
+                
+                width: 100%;
+                left: 0;
+                background: #FFF;
+                height: 2px;
+
+                .swiper-scrollbar-drag{
+                    background: #B14E31;
+                }
             }
 
 
             img {
+                display: block;
                 object-fit: cover;
                 height: 100%;
+                width: 100%;
             }
 
             span {
@@ -106,4 +120,106 @@
             }
         }
     }
+}
+
+
+@media (min-width:577px) and (max-width:1000px){
+    .bestseller{
+        padding-top: 6%;
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: flex-start;
+            gap: 5%;
+            .left{
+                width: 100%;
+
+                h2{
+                    margin-bottom: 1rem;
+                }
+                p{
+                    margin-bottom: 1rem;
+                }
+            }
+            .right {
+                height: 300px;
+                width: 700px;
+    
+                .swiper {
+                    height: 300px;
+                }
+            }
+        }
+    }
+
+}
+@media (min-width:450px) and (max-width:577px){
+    .bestseller{
+        padding-top: 6%;
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: flex-start;
+            gap: 5%;
+            .left{
+                width: 100%;
+
+                h2{
+                    margin-bottom: 1rem;
+                }
+                p{
+                    margin-bottom: 1rem;
+                }
+            }
+            .right {
+                height: 300px;
+                width: 550px;
+    
+                .swiper {
+                    height: 300px;
+                }
+                .swiper-scrollbar-horizontal{
+                
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+}
+@media (max-width:450px){
+    .bestseller{
+        padding-top: 6%;
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: flex-start;
+            gap: 5%;
+            .left{
+                width: 100%;
+
+                h2{
+                    margin-bottom: 1rem;
+                }
+                p{
+                    margin-bottom: 1rem;
+                }
+            }
+            .right {
+                height: 300px;
+                width: 550px;
+    
+                .swiper {
+                    height: 300px;
+                }
+                .swiper-scrollbar-horizontal{
+                    width: 60%;
+                }
+            }
+        }
+    }
+
 }

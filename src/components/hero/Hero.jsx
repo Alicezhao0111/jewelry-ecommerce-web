@@ -2,6 +2,7 @@ import React from "react";
 import "./Hero.scss";
 import landingpic1 from "../../assets/landingpic1.png";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
@@ -11,9 +12,39 @@ const Hero = () => {
           <img src={landingpic1} alt="" />
         </div>
         <div className="text">
-          <h2>Handmade</h2>
-          <h2>Macrame</h2>
-          <h2>Bohemian</h2>
+          <motion.h2
+            variants={{
+              hidden: { opacity: 0, x: 75 },
+              visible: { opacity: 1, x: 0 },
+            }}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 1, delay: 0.2 }}
+          >
+            Handmade
+          </motion.h2>
+          <motion.h2
+            variants={{
+              hidden: { opacity: 0, x: 75 },
+              visible: { opacity: 1, x: 0 },
+            }}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 1, delay: 0.6 }}
+          >
+            Macrame
+          </motion.h2>
+          <motion.h2
+            variants={{
+              hidden: { opacity: 0, x: 75 },
+              visible: { opacity: 1, x: 0 },
+            }}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 1, delay: 0.9 }}
+          >
+            Bohemian
+          </motion.h2>
           <Link to="/shop" className="btn">
             <span>SHOP NOW</span>
             <svg
@@ -100,7 +131,10 @@ const Hero = () => {
       </div>
       <div className="bottom">
         <div className="marquee">
-          <span>For all the free spirits living in this modern world . For all the free spirits living in this modern world . </span>
+          <span>
+            For all the free spirits living in this modern world . For all the
+            free spirits living in this modern world .{" "}
+          </span>
         </div>
       </div>
     </div>
