@@ -4,6 +4,7 @@ import userIcon from "../../assets/userIcon.svg"
 import starIcon from "../../assets/starIcon.svg"
 import globalIcon from "../../assets/globalIcon.svg"
 import subBg from "../../assets/subBg.jpg"
+import { Link } from "react-router-dom";
 
 const Subscribe = () => {
   return (
@@ -14,8 +15,8 @@ const Subscribe = () => {
             
             <h2>Free the spirit</h2>
             <h3>Sign up to receive free delivery for your first order</h3>
-            <p>加入會員即贈免運卷 </p>
-            <div className="btn">
+            {/* <p>加入會員即贈免運卷 </p> */}
+            <Link to="/user" className="btn">
               <span>JOIN NOW</span>
               <svg
                 width="38"
@@ -29,7 +30,7 @@ const Subscribe = () => {
                   fill="white"
                 />
               </svg>
-            </div>
+            </Link>
         </div>
       </div>
       <div className="bottom">
@@ -38,19 +39,19 @@ const Subscribe = () => {
                 <div className="box">
                 <img src={userIcon} alt="" />
                 </div>
-                <p>Customized service available</p>
+                <p>Customized service <br></br>available</p>
             </div>
             <div className="item">
                 <div className="box">
                     <img src={starIcon} alt="" />
                 </div>
-                <p>5 stars rating on Pinkoi and Shopee</p>
+                <p>5 stars rating on Pinkoi <br></br> and Shopee</p>
             </div>
             <div className="item">
             <div className="box">
                 <img src={globalIcon} alt="" />
                 </div>
-                <p>Worldwide shipping available</p>
+                <p>Worldwide shipping <br></br> available</p>
             </div>
         </div>
       </div>

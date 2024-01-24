@@ -87,9 +87,16 @@
                     line-height: normal;
                 }
 
+                svg{
+                    transition: transform 0.3s ease;
+                }
+
             }
             .btn:hover, .btn:active{
-                background: #D4B2A8;
+                background: rgba(189, 161, 140, 0.5);
+                svg{
+                    transform: translateX(30%);
+                }
 
             }
         }

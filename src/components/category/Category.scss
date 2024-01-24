@@ -31,7 +31,6 @@
 
             .swiper {
                 height: 260px;
-                
                 padding-bottom: 30px;
 
             }
@@ -66,5 +65,20 @@
             }
         }
 
+    }
+}
+
+@media (max-width:576.98px){
+    .category{
+        height: 400px;
+        .container{
+            .slider{
+                height: 250px;
+
+                .swiper{
+                    height: 210px;
+                }
+            }
+        }
     }
 }

@@ -36,8 +36,6 @@ const ShopCategory = ({
     
   };
 
-  // 現在filter功能無法跨頁正常使用12/17
-
   return (
     <div className="category">
       <ul className="title">
